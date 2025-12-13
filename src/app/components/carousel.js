@@ -1,6 +1,7 @@
 "use client";
 
 import Head from "next/head";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
 import { useTranslations } from "next-intl";
@@ -73,12 +74,14 @@ export default function FullWidthCarousel() {
           {images.map((src, index) => (
             <SwiperSlide key={index} className="flex justify-center bg-transparent">
               <div className="relative transition-all duration-500 ease-in-out transform hover:scale-105 hover:rotate-1">
-                <img
+                <Image
                   src={src}
                   alt={`Slide ${index + 1} - Bantu Pay`}
+                  width={800}
+                  height={600}
                   className="w-[90%] md:w-[85%] lg:w-[100%] xl:w-[100%] rounded-xl shadow-lg"
-                  loading="lazy"
-                  decoding="async"
+                  sizes="(max-width: 768px) 90vw, (max-width: 1024px) 85vw, 100vw"
+                  quality={85}
                 />
               </div>
             </SwiperSlide>

@@ -9,7 +9,7 @@ import { measurePageLoad } from '@/lib/performance';
 // Lazy-loaded components for better initial page performance
 const About = React.lazy(() => import('../components/About').catch(() => ({ default: () => <div>About loading...</div> })));
 const FeaturesSection = React.lazy(() => import('../components/Features').catch(() => ({ default: () => <div>Features loading...</div> })));
-const AccountPlans = React.lazy(() => import('../components/Pricing').catch(() => ({ default: () => <div>Pricing loading...</div> })));
+// const AccountPlans = React.lazy(() => import('../components/Pricing').catch(() => ({ default: () => <div>Pricing loading...</div> })));
 const PreSignUpForm = React.lazy(() => import('../components/signup').catch(() => ({ default: () => <div>Signup loading...</div> })));
 const Carousel = React.lazy(() => import('../components/carousel').catch(() => ({ default: () => <div>Slides loading...</div> })));
 const Map = React.lazy(() => import('../components/map').catch(() => ({ default: () => <div>Map loading...</div> })));
