@@ -1,6 +1,14 @@
 /* Optimized Font Loading */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Pacifico:wght@400&display=swap');
 
+@font-face {
+  font-family: 'Conneqt Black';
+  src: url('/fonts/Conneqt Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Alternative Font Configurations (use if you have local font files)
 @font-face {
   font-family: 'Söhne';
