@@ -4,17 +4,29 @@ import React, { Suspense, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
 import NavBar from '../components/navBar';
 import Intro from '../components/Intro';
+import About from '../components/About';
+import FeaturesSection from '../components/Features';
+import PricingTable from '../components/Pricingss';
 import { measurePageLoad } from '@/lib/performance';
+import dynamic from 'next/dynamic';
 
-// Lazy-loaded components for better initial page performance
-const About = React.lazy(() => import('../components/About').catch(() => ({ default: () => <div>About loading...</div> })));
-const FeaturesSection = React.lazy(() => import('../components/Features').catch(() => ({ default: () => <div>Features loading...</div> })));
-// const AccountPlans = React.lazy(() => import('../components/Pricing').catch(() => ({ default: () => <div>Pricing loading...</div> })));
-const PreSignUpForm = React.lazy(() => import('../components/signup').catch(() => ({ default: () => <div>Signup loading...</div> })));
-const Carousel = React.lazy(() => import('../components/carousel').catch(() => ({ default: () => <div>Slides loading...</div> })));
-const Map = React.lazy(() => import('../components/map').catch(() => ({ default: () => <div>Map loading...</div> })));
-const ContactForm = React.lazy(() => import('../components/contact').catch(() => ({ default: () => <div>Contact loading...</div> })));
-const PricingTable = React.lazy(() => import('../components/Pricingss').catch(() => ({ default: () => <div>Billing loading...</div> })));
+// Lazy-load heavy / non-critical components
+const PreSignUpForm = dynamic(() => import('../components/signup'), {
+  ssr: false,
+  loading: () => <div className="text-gray-500 py-8 text-center">Loading form...</div>
+});
+const Carousel = dynamic(() => import('../components/carousel'), {
+  ssr: false,
+  loading: () => <div className="text-gray-500 py-8 text-center">Loading gallery...</div>
+});
+const Map = dynamic(() => import('../components/map'), {
+  ssr: false,
+  loading: () => <div className="text-gray-500 py-8 text-center">Loading map...</div>
+});
+const ContactForm = dynamic(() => import('../components/contact'), {
+  ssr: false,
+  loading: () => <div className="text-gray-500 py-8 text-center">Loading contact...</div>
+});
 
 export default function HomePage() {
   const t = useTranslations('HomePage');
@@ -37,35 +49,18 @@ export default function HomePage() {
       <NavBar />
       <Intro />
 
-      {/* Lazy loaded sections with performance */}
+      {/* Above-the-fold content: load immediately */}
+      <About />
+      <FeaturesSection />
+      <PricingTable />
+
+      {/* Lazy-load below-the-fold / heavy sections */}
       <Suspense fallback={<div className="flex justify-center items-center py-16"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-green-600"></div></div>}>
-        <About />
-      </Suspense>
-
-      <Suspense fallback={<div className="flex justify-center items-center py-16"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
-        <FeaturesSection />
-      </Suspense>
-
-      <Suspense fallback={<div className="flex justify-center items-center py-8"><div className="text-gray-500">Loading pricing...</div></div>}>
-        <PricingTable />
-      </Suspense>
-
-      <Suspense fallback={<div className="flex justify-center items-center py-8"><div className="text-gray-500">Loading form...</div></div>}>
         <PreSignUpForm />
-      </Suspense>
-
-      <Suspense fallback={<div className="flex justify-center items-center py-8"><div className="text-gray-500">Loading gallery...</div></div>}>
         <Carousel />
-      </Suspense>
-
-      <Suspense fallback={<div className="flex justify-center items-center py-8"><div className="text-gray-500">Loading map...</div></div>}>
         <Map />
-      </Suspense>
-
-      <Suspense fallback={<div className="flex justify-center items-center py-8"><div className="text-gray-500">Loading contact...</div></div>}>
         <ContactForm />
       </Suspense>
-
     </div>
   );
 }
