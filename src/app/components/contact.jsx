@@ -138,7 +138,7 @@ export default function ContactForm() {
             background: "linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9)) padding-box, conic-gradient(#8B4513, #562315, #8B7355, #8B4513) border-box"
           }}
         >
-          {/* Decorative Elements */}}
+          {/* Decorative Elements */}
         <motion.div
           className="absolute top-0 left-0 w-20 h-20 bg-gradient-to-br from-[#8B4513] to-[#562315] rounded-full transform -translate-x-1/2 -translate-y-1/2 opacity-10"
           animate={{ rotate: 360 }}
