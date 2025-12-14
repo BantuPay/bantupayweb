@@ -58,7 +58,7 @@ export default function FullWidthCarousel() {
         <meta name="twitter:image" content="/carousel.png" />
       </Head>
 
-      <div className="w-full bg-gradient-to-br from-[#F7F0E7] via-[#EADBC8] to-[#D4B08A] py-16 relative overflow-hidden">
+      <div className="w-full bg-gradient-to-br from-[#F7F0E7] via-[#EADBC8] to-[#D4B08A] py-16 relative overflow-hidden border-3xl border-[#8B4513] rounded-3xl">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-pulse"></div>
         <div className="absolute top-10 left-10 w-32 h-32 bg-[#562315]/10 rounded-full blur-3xl animate-bounce"></div>

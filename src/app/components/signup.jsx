@@ -67,7 +67,7 @@ export default function PreSignUpForm() {
   // MAIN RENDER
   // ============================================================================
   return (
-    <div className="relative flex flex-col md:flex-row items-center justify-center min-h-screen overflow-hidden">
+    <div className="relative flex flex-col md:flex-row items-center justify-center min-h-screen overflow-hidden rounded-3xl">
       
       {/* ===================================================================== */}
       {/* ANIMATED BACKGROUND */}
@@ -226,7 +226,8 @@ export default function PreSignUpForm() {
       {/* RIGHT SIDE - SIGNUP FORM */}
       {/* ===================================================================== */}
       <motion.div
-        className="md:w-1/2 bg-white/95 backdrop-blur-xl px-4 py-6 md:p-8 shadow-2xl rounded-3xl max-w-lg relative overflow-hidden"
+        className="md:w-1/2 bg-white/95 backdrop-blur-xl px-4 py-6 md:p-8 shadow-2xl rounded-3xl max-w-lg relative overflow-hidden mx-2 mb-3 md:mx-0 md:mb-0"
+
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -267,7 +268,7 @@ export default function PreSignUpForm() {
             <span className="text-[#8B4513] font-semibold text-sm">Get Started</span>
           </motion.div>
 
-          <h2 className="text-4xl font-bold mb-3 bg-gradient-to-r from-[#8B4513] to-[#562315] bg-clip-text text-transparent">
+          <h2 className="text-4xl font-bold mb-3 bg-gradient-to-r from-[#8B4513] to-[#562315] bg-clip-text text-transparent" style={{ fontFamily: "'Conneqt Black', sans-serif" }}>
             {t("pre_signup_title")}
           </h2>
           <p className="text-gray-600 text-lg leading-relaxed">{t("pre_signup_description")}</p>
