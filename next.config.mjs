@@ -15,7 +15,7 @@ const nextConfig = {
   // Performance optimizations
   experimental: {
     optimizePackageImports: ['lucide-react', 'next-intl'],
-    optimizeCss: true,
+    optimizeCss: false,
   },
 
   // Compression

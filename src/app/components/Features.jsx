@@ -1,4 +1,4 @@
-"use client";
+
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -73,7 +73,7 @@ export default function FeaturesSection() {
               {/* Icon Section */}
               <div className="feature-icon-container">
                 <div className="feature-icon-bg">
-                  <span className="feature-emoji">{feature.icon}</span>
+
                 </div>
                 <div className="feature-image-wrapper">
                   <Image

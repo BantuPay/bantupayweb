@@ -82,7 +82,7 @@ export default function FullWidthCarousel() {
                   stroke="#8B3D27" strokeWidth="2" fill="none" strokeLinecap="round" opacity="0.3"/>
           </svg>
           
-          <h1 className="text-4xl md:text-6xl font-extrabold text-[#562315] drop-shadow-2xl bg-gradient-to-r from-[#562315] to-[#8B3D27] bg-clip-text text-transparent animate-fade-in relative z-10" style={{ fontFamily: "'Conneqt Black', sans-serif" }}>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-[#562315] drop-shadow-2xl  animate-fade-in relative z-10" style={{ fontFamily: "'Conneqt Black', sans-serif" }}>
             {t("title")}
           </h1>
           <p className="text-lg md:text-xl font-medium text-gray-700 mt-4 max-w-4xl mx-auto drop-shadow-lg relative z-10">

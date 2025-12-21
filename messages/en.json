@@ -15,7 +15,12 @@
           "point1": "Traditional banks in D.R. Congo don’t see a certain class of people as potential clients.",
           "point2": "Online money remittance platforms charge high fees, discouraging consumers.",
           "point3": "Receivers must travel to city centers to collect funds, adding transportation costs.",
-          "solution": "Well, that stops now!",
+          "mission_title": "Our Mission",
+          "security_title": "Security First",
+          "global_access_title": "Global Access",
+          "speed_efficiency_title": "Speed & Efficiency",
+          "story_tittle": "Our Story",
+          "solution": "Well, that stops now! BantuPay is committed to providing accessible financial services to everyone, regardless of their background or location. We believe that financial freedom should be within reach for all, breaking down barriers and empowering communities through innovative mobile banking solutions.",
           "paragraph1": "BantuPay is the solution—a mobile banking app facilitating instant money transfers for everyone in D.R. Congo and the diaspora.",
           "paragraph2": "It serves as an E-Wallet and payment system, enabling consumers to pay for goods and services (restaurants, online courses, boutiques, etc.) and deposit/withdraw money from local money agents.",
           "image_caption": "Your Mobile Banking Who Assures",
@@ -30,7 +35,9 @@
           "team_content": "A diverse group of financial experts, technology innovators, and community advocates working together to revolutionize mobile banking in Africa.",
           
           "innovation_title": "Innovation First",
-          "innovation_content": "We leverage cutting-edge technology to provide secure, fast, and reliable financial services that meet the evolving needs of our users."
+          "innovation_content": "We leverage cutting-edge technology to provide secure, fast, and reliable financial services that meet the evolving needs of our users.",
+          "empowering_financial": "Empowering Financial",
+          "freedom": "Freedom"
       },
       
         "FeaturesPage": {
@@ -109,7 +116,24 @@
         "PricingPage_Business_Feature4": "Deposit And Withdraw Cash Amount At Any Local Money Agent In D.R.Congo",
         "PricingPage_Business_Feature5": "Top Up Your Account With Any Visa Card",
         "PricingPage_Business_Feature6": "Top Up Mobile Credit",
-        "PricingPage_Business_Feature7": "Low Monthly Fee"
+        "PricingPage_Business_Feature7": "Low Monthly Fee",
+         "header_badge": "Pricing Plans",
+         "title": "Choose Your Plan",
+         "description": "Select the perfect plan that fits your financial needs and goals",
+         "features_header": "Features",
+         "pricing_header": "Pricing",
+         "most_popular": "Most Popular",
+         "features": [
+           "CURRENT ACC",
+           "SAVINGS ACC",
+           "VIRTUAL VISA",
+           "Withdraw from Agent",
+           "Top up VISA",
+           "Topup Mobile Money",
+           "Marketplace",
+           "VISA Payouts",
+           "2nd Number + OTP"
+         ]
       },
 
       "SignupPages":{

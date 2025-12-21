@@ -15,8 +15,13 @@
       "point1": "Les banques traditionnelles en RDC ne considèrent pas une certaine classe de personnes comme des clients potentiels.",
       "point2": "Les plateformes de transfert d'argent en ligne facturent des frais élevés, décourageant les consommateurs.",
       "point3": "Les bénéficiaires doivent se rendre dans les centres-villes pour récupérer les fonds, ajoutant des coûts de transport.",
+      "mission_title": "Notre Mission",
+      "security_title": "Sécurité d'Abord",
+      "global_access_title": "Accès Global",
+      "speed_efficiency_title": "Vitesse et Efficacité",
+      "story_tittle": "Notre Histoire",
       
-      "solution": "Eh bien, cela s'arrête maintenant !",
+      "solution": "Eh bien, cela s'arrête maintenant ! BantuPay s'engage à fournir des services financiers accessibles à tous, indépendamment de leur origine ou de leur localisation. Nous croyons que la liberté financière devrait être à la portée de tous, en brisant les barrières et en autonomisant les communautés grâce à des solutions bancaires mobiles innovantes.",
       "paragraph1": "BantuPay est la solution — une application bancaire mobile facilitant les transferts d'argent instantanés pour tout le monde en RDC et dans la diaspora.",
       "paragraph2": "Elle sert de portefeuille électronique et de système de paiement, permettant aux consommateurs de payer des biens et services (restaurants, cours en ligne, boutiques, etc.) et de déposer/retirer de l'argent auprès d'agents locaux.",
       
@@ -32,7 +37,9 @@
       "team_content": "Un groupe diversifié d'experts financiers, d'innovateurs technologiques et de défenseurs communautaires travaillant ensemble pour révolutionner la banque mobile en Afrique.",
       
       "innovation_title": "Innovation d'Abord",
-      "innovation_content": "Nous exploitons une technologie de pointe pour fournir des services financiers sécurisés, rapides et fiables qui répondent aux besoins évolutifs de nos utilisateurs."
+      "innovation_content": "Nous exploitons une technologie de pointe pour fournir des services financiers sécurisés, rapides et fiables qui répondent aux besoins évolutifs de nos utilisateurs.",
+      "empowering_financial": "Autonomiser Financier",
+      "freedom": "Liberté"
     },
     
       "FeaturesPage": {
@@ -110,7 +117,24 @@
     "PricingPage_Business_Feature4": "Déposez et Retirez de L'Argent Chez Tout Agent Local en RDC",
     "PricingPage_Business_Feature5": "Rechargez Votre Compte Avec N'importe Quelle Carte Visa",
     "PricingPage_Business_Feature6": "Rechargez Votre Crédit Mobile",
-    "PricingPage_Business_Feature7": "Faible Frais Mensuel"
+    "PricingPage_Business_Feature7": "Faible Frais Mensuel",
+    "header_badge": "Plans de Tarification",
+    "title": "Choisissez Votre Plan",
+    "description": "Sélectionnez le plan parfait qui correspond à vos besoins et objectifs financiers",
+    "features_header": "Fonctionnalités",
+    "pricing_header": "Tarification",
+    "most_popular": "Le Plus Populaire",
+    "features": [
+      "COMPTE COURANT",
+      "COMPTE ÉPARGNE",
+      "VISA VIRTUELLE",
+      "Retirer chez l'Agent",
+      "Recharger VISA",
+      "Recharger Mobile Money",
+      "Marché",
+      "Paiements VISA",
+      "2ème Numéro + OTP"
+    ]
 },
     "SignupPages":{
       "pre_signup_title": "Formulaire de pré-inscription",
