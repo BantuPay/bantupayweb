@@ -9,35 +9,6 @@
   font-display: swap;
 }
 
-/* Alternative Font Configurations (use if you have local font files)
-@font-face {
-  font-family: 'Söhne';
-  src: url('/fonts/Sohne.woff2') format('woff2'),
-       url('/fonts/Sohne.woff') format('woff');
-  font-weight: 400 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manuka';
-  src: url('/fonts/Manuka.woff2') format('woff2'),
-       url('/fonts/Manuka.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Feature';
-  src: url('/fonts/Feature.woff2') format('woff2'),
-       url('/fonts/Feature.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-*/
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
