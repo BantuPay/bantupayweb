@@ -85,7 +85,7 @@ export default function About() {
                   className="object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#562315]/70 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#562315]/40 via-transparent to-transparent" />
                 
               </div>
             </motion.div>
