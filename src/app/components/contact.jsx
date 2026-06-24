@@ -4,6 +4,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useTranslations } from "next-intl";
 import { motion } from "framer-motion";
+import SectionHeader from "./SectionHeader";
 
 export default function ContactForm() {
   const t = useTranslations("ContactPages");
@@ -109,25 +110,16 @@ export default function ContactForm() {
           <ellipse cx="650" cy="650" rx="25" ry="50" fill="#8B4513" opacity="0.5" transform="rotate(-60 650 650)" />
         </svg>
       </div>
-      {/* Heading */}
-      <motion.h1
-        className="text-4xl md:text-5xl pt-6 font-extrabold text-[#562315] drop-shadow-md relative z-10 font-['Conneqt_Black']"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        {t("title")}
-      </motion.h1>
-      <motion.p
-        className="text-md text-sm md:text-lg text-gray-600 mt-2 text-center max-w-2xl relative z-10"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.2 }}
-      >
-        {t("description")}
-      </motion.p>
+      <SectionHeader
+        badge={t("badge")}
+        title={t("title")}
+        subtitle={t("description")}
+        variant="light"
+        wide
+        className="pt-6 relative z-10"
+      />
 
-      /* Form Container with border */
+      {/* Form Container with border */}
         <motion.div
           className="w-full max-w-lg md:max-w-2xl bg-white/95 backdrop-blur-xl p-8 md:p-10 mt-8 rounded-3xl shadow-2xl relative overflow-hidden z-10 mx-4 md:mx-auto"
           initial={{ opacity: 0, y: 50 }}

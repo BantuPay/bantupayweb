@@ -122,7 +122,8 @@ export default function PreSignUpForm() {
     alt="Signup Illustration"
     height={400}
     width={400}
-    priority
+    loading="lazy"
+    sizes="(max-width: 768px) 80vw, 400px"
     className="max-w-xs md:max-w-lg w-full rounded-2xl drop-shadow-2xl"
   />
 </div>
@@ -258,20 +259,12 @@ export default function PreSignUpForm() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <motion.div
-            className="inline-flex items-center gap-2 bg-[#8B4513]/10 px-4 py-2 rounded-full mb-4"
-            whileHover={{ scale: 1.05 }}
-          >
-            <svg className="w-5 h-5 text-[#8B4513]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            <span className="text-[#8B4513] font-semibold text-sm">Get Started</span>
-          </motion.div>
+          <span className="section-badge mb-4">{t("badge")}</span>
 
-          <h2 className="text-4xl font-bold mb-3 bg-gradient-to-r from-[#8B4513] to-[#562315] bg-clip-text text-transparent" style={{ fontFamily: "'Conneqt Black', sans-serif" }}>
+          <h2 className="section-title mb-3 bg-gradient-to-r from-[#8B4513] to-[#562315] bg-clip-text text-transparent">
             {t("pre_signup_title")}
           </h2>
-          <p className="text-gray-600 text-lg leading-relaxed">{t("pre_signup_description")}</p>
+          <p className="section-subtitle">{t("pre_signup_description")}</p>
         </motion.div>
 
         <motion.form

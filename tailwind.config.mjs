@@ -8,17 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        /* Similar Google Fonts as alternatives */
-        'manuka': ['Pacifico', 'cursive'], // Similar playful script style
-        'feature': ['Montserrat', 'system-ui', '-apple-system', 'sans-serif'], // Modern, clean
-        'sohne': ['Inter', 'system-ui', '-apple-system', 'sans-serif'], // Very similar to Söhne
-
-        /* Original font names for when you have font files */
-        /*
-        'manuka': ['Manuka', 'Pacifico', 'cursive'],
-        'feature': ['Feature', 'Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
-        'sohne': ['Söhne', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        */
+        'manuka': ['var(--font-pacifico)', 'Pacifico', 'cursive'],
+        'feature': ['var(--font-montserrat)', 'Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
+        'sohne': ['var(--font-inter)', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       colors: {
         background: "var(--background)",

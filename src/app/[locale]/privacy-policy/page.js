@@ -33,7 +33,7 @@ export default function PrivacyPolicyPage() {
             height={200}
             className="mx-auto h-20 w-20 bg-amber-50 rounded-lg object-contain"
           />
-          <h1 className="mt-6 font-feature text-4xl font-semibold text-[#2d140a] dark:text-white">
+          <h1 className="mt-6 section-title text-4xl font-semibold text-[#2d140a] dark:text-white">
             Privacy Policy
           </h1>
           <p className="mt-6 text-base leading-relaxed text-slate-700 dark:text-slate-300">

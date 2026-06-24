@@ -1,6 +1,3 @@
-/* Optimized Font Loading */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Pacifico:wght@400&display=swap');
-
 @font-face {
   font-family: 'Conneqt Black';
   src: url('/fonts/Conneqt Black.ttf') format('truetype');
@@ -32,18 +29,79 @@ body {
   padding: 0;
   overflow-x: hidden;
   min-height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* GPU Acceleration for better performance */
-* {
+/* GPU acceleration — only animated elements, not all interactive nodes */
+.navbar, [class*="animate"] {
   -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
   transform: translateZ(0);
+}
+
+/* Lightweight scroll-reveal (replaces framer-motion above the fold) */
+@keyframes revealUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes revealLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes revealRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.reveal-up {
+  animation: revealUp 0.6s ease-out both;
+}
+
+.reveal-left {
+  animation: revealLeft 0.6s ease-out both;
+}
+
+.reveal-right {
+  animation: revealRight 0.6s ease-out both;
+}
+
+.social-icon-img {
+  filter: brightness(0) invert(1);
+  opacity: 0.95;
+}
+
+.social-icon-svg {
+  width: 18px;
+  height: 18px;
+  color: #F7F0E7;
+}
+
+/* About section — Material-inspired design tokens */
+.about-bg-pattern {
+  background-image: radial-gradient(#421904 0.5px, transparent 0.5px);
+  background-size: 24px 24px;
+  opacity: 0.03;
+}
+
+/* Screenshots carousel — minimal pagination */
+.screenshots-swiper .swiper-pagination {
+  bottom: 0 !important;
+}
+
+.screenshots-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #d7c2ba;
+  opacity: 1;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.screenshots-swiper .swiper-pagination-bullet-active {
+  background: #421904;
+  transform: scale(1.15);
 }
 
 /* Optimized animations - reduce motion for users who prefer it */
@@ -92,9 +150,6 @@ body {
 
   /* Hardware Acceleration */
   transform: translateX(-50%) translateZ(0);
-  will-change: transform, opacity;
-
-  /* Reduce complexity */
   backface-visibility: hidden;
 }
 
@@ -1344,8 +1399,11 @@ body {
 
 .badge-text {
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   color: #562315;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
 }
 
 .badge-glow {
@@ -1372,6 +1430,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
 }
 
 .title-brand {
@@ -2014,6 +2073,7 @@ body {
 }
 
 .features-badge .badge-text {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #F7F0E7;
@@ -2027,7 +2087,7 @@ body {
   line-height: 1.1;
   margin-bottom: 24px;
   color: #F7F0E7;
-  font-family: 'Conneqt Black', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
 }
 
 .features-subtitle {
@@ -2036,6 +2096,7 @@ body {
   color: #EDE0D4;
   max-width: 600px;
   margin: 0 auto;
+  font-family: var(--font-inter), 'Inter', sans-serif;
 }
 
 /* Features Grid */
@@ -2146,7 +2207,7 @@ body {
   color: #562315;
   margin-bottom: 12px;
   line-height: 1.3;
-  font-family: 'Conneqt Black', sans-serif;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
 }
 
 .feature-description {
@@ -2154,6 +2215,7 @@ body {
   line-height: 1.6;
   color: #6B5B4F;
   margin: 0;
+  font-family: var(--font-inter), 'Inter', sans-serif;
 }
 
 /* Feature Hover Effect */
@@ -2366,5 +2428,93 @@ body {
   }
 }
 
+/* Site-wide section typography */
+.section-badge {
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border: 1px solid rgba(66, 25, 4, 0.25);
+  border-radius: 9999px;
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #421904;
+  margin-bottom: 1.25rem;
+}
 
+.section-title {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #421904;
+  margin-bottom: 0.75rem;
+}
+
+.section-subtitle {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.625;
+  color: #52443e;
+}
+
+.section-heading {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #421904;
+}
+
+.section-body {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.625;
+  color: #52443e;
+}
+
+.section-label {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #421904;
+}
+
+.section-badge-light {
+  border-color: rgba(247, 240, 231, 0.35);
+  color: #f7f0e7;
+}
+
+.section-title-light {
+  color: #f7f0e7;
+}
+
+.section-title-accent {
+  color: #ffb693 !important;
+}
+
+.section-subtitle-light {
+  color: #ede0d4;
+}
+
+.hero-description,
+.stat-label {
+  font-family: var(--font-inter), 'Inter', sans-serif;
+}
+
+.stat-number,
+.cta-text {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+}
+
+.title-brand,
+.title-main,
+.title-accent {
+  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+}
 

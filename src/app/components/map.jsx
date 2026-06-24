@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import SectionHeader from "./SectionHeader";
 
 export default function Map() {
   const t = useTranslations("MapPages");
@@ -12,22 +13,18 @@ export default function Map() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Modern Header */}
-        <header className="text-center mb-12 md:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-white/90 backdrop-blur-sm border border-[#562315] rounded-full mb-4 shadow-sm">
-            <span className="w-1.5 h-1.5 bg-[#562315] rounded-full" />
-            <span className="text-xs font-extrabold text-[#562315] uppercase ">{t("title")}</span>
-          </div>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-black mb-3 text-[#562315]" style={{ fontFamily: 'Conneqt Black, sans-serif' }}>
-            {t("title")}
-          </h1>
-          <p className="text-sm md:text-base lg:text-lg text-[#6B5B4F] max-w-2xl mx-auto leading-relaxed mb-4">
-            {t("description")}
-          </p>
-          <p className="text-sm md:text-base lg:text-lg text-[#6B5B4F] max-w-2xl mx-auto leading-relaxed">
-            {t("description2")}
-          </p>
-        </header>
+        <SectionHeader
+          badge={t("badge")}
+          title={t("title")}
+          wide
+          className="mb-4"
+        />
+        <p className="section-subtitle text-center max-w-2xl mx-auto mb-4">
+          {t("description")}
+        </p>
+        <p className="section-subtitle text-center max-w-2xl mx-auto mb-12 md:mb-16">
+          {t("description2")}
+        </p>
 
         {/* Modern Image Container */}
         <div className="relative">
@@ -37,7 +34,8 @@ export default function Map() {
               alt="Bantu Pay - Where We Operate"
               width={1200}
               height={800}
-              priority
+              loading="lazy"
+              sizes="(max-width: 768px) 100vw, 80vw"
               className="w-full h-auto object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#562315]/20 via-transparent to-transparent rounded-3xl" />

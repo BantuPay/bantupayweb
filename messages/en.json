@@ -4,43 +4,63 @@
       "about": "Go to the about page"
     },
     "IntroPage":{
+      "badge": "Next Generation Payment",
       "title": "Your Mobile Banking",
       "title2": "Who Assures",
       "description": "Send & Receive money instantly. Pay for goods and services between BantuPay users."
     },
       "AboutPage": {
           "title": "About Bantu Pay",
-          "description": "Bantu-Pay is a Mobile Banking app for consumers to transfer money instantly and maintain an E-wallet for their daily needs.",
-        
-          "point1": "Traditional banks in D.R. Congo don’t see a certain class of people as potential clients.",
-          "point2": "Online money remittance platforms charge high fees, discouraging consumers.",
-          "point3": "Receivers must travel to city centers to collect funds, adding transportation costs.",
-          "mission_title": "Our Mission",
-          "security_title": "Security First",
-          "global_access_title": "Global Access",
-          "speed_efficiency_title": "Speed & Efficiency",
-          "story_tittle": "Our Story",
-          "solution": "Well, that stops now! BantuPay is committed to providing accessible financial services to everyone, regardless of their background or location. We believe that financial freedom should be within reach for all, breaking down barriers and empowering communities through innovative mobile banking solutions.",
-          "paragraph1": "BantuPay is the solution—a mobile banking app facilitating instant money transfers for everyone in D.R. Congo and the diaspora.",
-          "paragraph2": "It serves as an E-Wallet and payment system, enabling consumers to pay for goods and services (restaurants, online courses, boutiques, etc.) and deposit/withdraw money from local money agents.",
-          "image_caption": "Your Mobile Banking Who Assures",
-          
-          "vision_title": "Our Vision",
-          "vision_content": "To become the leading financial technology platform in Central Africa, empowering communities through accessible and innovative banking solutions.",
-          
-          "impact_title": "Our Impact",
-          "impact_content": "Since our inception, we've been committed to bridging the financial gap in D.R. Congo, providing services to underserved communities and the diaspora worldwide.",
-          
-          "team_title": "Our Team",
-          "team_content": "A diverse group of financial experts, technology innovators, and community advocates working together to revolutionize mobile banking in Africa.",
-          
-          "innovation_title": "Innovation First",
-          "innovation_content": "We leverage cutting-edge technology to provide secure, fast, and reliable financial services that meet the evolving needs of our users.",
+          "description": "A mobile banking platform built to move money instantly, securely, and without friction — for families, businesses, and communities in the D.R. Congo and beyond.",
           "empowering_financial": "Empowering Financial",
-          "freedom": "Freedom"
+          "freedom": "Freedom",
+          "story_title": "Our Story",
+          "mission_title": "Our Mission",
+          "pillars_section_title": "The Pillars of BantuPay",
+          "image_alt": "Contemporary illustration symbolizing the fusion of African heritage and modern fintech",
+          "story_blocks": [
+            "It started with a frustration many people know too well. Sending money to loved ones in the D.R. Congo is never simple. It's slow, expensive, and unpredictable. What should have been a quick act of support often turned into a stressful process, with long waits and high fees.",
+            "For families, students, and entrepreneurs, this wasn't just inconvenient. It was a real barrier. We believed it shouldn't be this way. So we built BantuPay.",
+            "A simple idea: what if sending money felt as easy as sending a message? What if anyone, whether in Kinshasa or abroad, could move money instantly, securely, and without friction?",
+            "BantuPay is more than just an app. It's a digital wallet and payment system designed for real life. It allows people to send and receive money instantly, pay for everyday services, and access cash through mobile money agents."
+          ],
+          "mission_blocks": [
+            "For too long, access to financial services has depended on where you live, who you know, or what you have. We believe that must change.",
+            "Our mission is to break down the barriers that hold people back and replace them with simple, powerful tools that just work. Through mobile banking, we're creating a system where anyone can send, receive, and use money instantly — without friction, without limits.",
+            "For millions of people, something as basic as sending money, getting paid, or managing finances is still a challenge. Opportunities are missed. Businesses grow slower.",
+            "BantuPay exists to make financial freedom accessible to everyone, no matter their background, no matter their location. Because access to money isn't just about convenience. It's about independence. It's about building a better future."
+          ],
+          "pillars": [
+            {
+              "id": "security",
+              "title": "Security First",
+              "summary": "Every transaction is protected, every account is safeguarded, and every user is treated as someone who deserves access to trusted financial tools."
+            },
+            {
+              "id": "global",
+              "title": "Global Access",
+              "summary": "Sending money shouldn't come with penalties. We are building a new standard for global movement where borders don't create barriers."
+            },
+            {
+              "id": "speed",
+              "title": "Speed & Efficiency",
+              "summary": "Money moves faster and closer. We believe money should meet you where you are, instantly accessible anytime, anywhere."
+            },
+            {
+              "id": "vision",
+              "title": "Our Vision",
+              "summary": "We see a future where anyone, anywhere can participate fully in the digital economy through a seamless financial ecosystem."
+            },
+            {
+              "id": "impact",
+              "title": "Our Impact",
+              "summary": "Real impact — not just in numbers, but in lives improved. We're bridging the financial gap for millions in the D.R. Congo."
+            }
+          ]
       },
       
         "FeaturesPage": {
+          "badge": "Features",
           "title": "Features In This App",
           "subtitle": "Your Digital Transactions Are Going To Be Smoother With These Game-Changing Additions",
           "feature1_title": "Low Transaction Fees",
@@ -138,6 +158,7 @@
 
       "SignupPages":{
         
+          "badge": "Get Started",
           "pre_signup_title": "Pre - SignUp Form",
           "pre_signup_description": "Do You Want to Be The First One To Be Part Of The BantuPay Community For When We Launch ..? Then Leave Your Details Below!!!",
           "name_placeholder": "Your Name",
@@ -157,18 +178,21 @@
           
         },
     "CarouselPages":{
+      "badge": "What's Inside The App",
       "title":"App Screenshots",
       "description":"What’s Inside The App?",
       "description2":"See For Yourself!"
     },
 
     "MapPages":{
+      "badge": "Global Coverage",
       "title":"Where We Operate From",
       "description":"You Can Access The BantuPay Service If You Reside In:",
       "description2":"Europe – UK – USA – Canada – D.R.Congo"
     },
 
     "ContactPages":{
+      "badge": "Get In Touch",
       "title":"Contact Us",
       "description":"Feel free to reach out in case of any inquiries. We don’t take long to respond!",
       "name": "First Name",
