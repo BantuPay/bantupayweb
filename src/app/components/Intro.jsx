@@ -1,118 +1,82 @@
-import Image from "next/image";
-import { getTranslations } from "next-intl/server";
+import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
 
 export default async function Intro() {
-  const t = await getTranslations("IntroPage");
+  const t = await getTranslations('IntroPage');
 
   return (
-    <section className="hero-section">
-      <div className="hero-background">
-        <div className="hero-gradient" />
-        <div className="hero-particles">
-          <div className="particle-field">
-            {[...Array(8)].map((_, i) => (
-              <div key={i} className={`floating-particle particle-${i % 5}`} />
-            ))}
-          </div>
-        </div>
-        <div className="hero-grid" />
-      </div>
-
-      <div className="hero-container">
-        <div className="hero-content">
-          <div className="hero-badge">
-            <span className="badge-icon">🚀</span>
-            <span className="badge-text">{t("badge")}</span>
-            <div className="badge-glow" />
-          </div>
-
-          <div className="hero-title-wrapper">
-            <h1 className="hero-title">
-              <span className="title-brand">Bantu Pay</span>
-              <span className="title-main">{t("title")}</span>
-              <span className="title-accent">{t("title2")}</span>
-            </h1>
-            <div className="title-underline" />
-          </div>
-
-          <p className="hero-description">{t("description")}</p>
-
-          <div className="hero-cta">
-            <button type="button" className="cta-primary">
-              <span className="cta-text font-semibold">Get Started</span>
-              <div className="cta-glow" />
-              <div className="cta-ripple" />
-            </button>
-            <button type="button" className="cta-secondary">
-              <span className="cta-text font-medium">Learn More</span>
-              <svg className="cta-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </button>
-          </div>
-
-          <div className="hero-stats">
-            <div className="stat-item">
-              <div className="stat-number font-bold">50K+</div>
-              <div className="stat-label font-medium">Active Users</div>
-            </div>
-            <div className="stat-divider" />
-            <div className="stat-item">
-              <div className="stat-number font-bold">99.9%</div>
-              <div className="stat-label font-medium">Uptime</div>
-            </div>
-            <div className="stat-divider" />
-            <div className="stat-item">
-              <div className="stat-number font-bold">24/7</div>
-              <div className="stat-label font-medium">Support</div>
-            </div>
-          </div>
+    <section id="top" className="bp-hero">
+      <div className="bp-copy">
+        <div className="bp-rv bp-eyebrow">
+          <span className="bp-eyebrow-rule" />
+          <span className="bp-eyebrow-text bp-mont">{t('badge')}</span>
         </div>
 
-        <div className="hero-visual">
-          <div className="image-container">
-            <div className="image-glow" />
-            <div className="image-frame">
-              <Image
-                src="/Artboard.webp"
-                alt={`Bantu Pay – ${t("title")} ${t("title2")}`}
-                width={900}
-                height={700}
-                priority
-                fetchPriority="high"
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAoACgDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAMEB//EACUQAAIBAwMEAwEBAAAAAAAAAAECAwAEEQUSITFBURNhcZEigf/EABUBAFEAAAAAAAAAAAAAAAAAAAH/xAAVEQEBAAAAAAAAAAAAAAAAAAAAAf/aAAwDAQACEQMRAD8A4+iiigAooooAKKKKACiiigD/2Q=="
-                className="hero-image"
-                sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 600px"
-                quality={80}
-              />
-              <div className="image-overlay" />
-            </div>
-            <div className="floating-elements">
-              <div className="floating-card card-1">
-                <div className="card-icon">💳</div>
-                <div className="card-text">Secure Payments</div>
-              </div>
-              <div className="floating-card card-2">
-                <div className="card-icon">⚡</div>
-                <div className="card-text">Instant Transfer</div>
-              </div>
-              <div className="floating-card card-3">
-                <div className="card-icon">🌍</div>
-                <div className="card-text">Global Reach</div>
-              </div>
-            </div>
+        <h1 className="bp-h1 bp-mont">
+          <span className="bp-line-mask">
+            <span className="bp-title-line">{t('headline_1')}</span>
+          </span>
+          <span className="bp-line-mask">
+            <span className="bp-title-line">{t('headline_2')}</span>
+          </span>
+          <span className="bp-line-mask">
+            <span className="bp-title-line bp-accent-text">{t('headline_3')}</span>
+          </span>
+        </h1>
+
+        <p className="bp-rv bp-lead">{t('description')}</p>
+
+        <div className="bp-rv bp-cta-row">
+          <button type="button" className="magnetic bp-btn-primary bp-cta bp-mont">
+            <span>{t('cta_primary')}</span>
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <button type="button" className="magnetic bp-btn-ghost bp-mont">
+            <span>{t('cta_secondary')}</span>
+          </button>
+        </div>
+
+        <div className="bp-rv bp-stats">
+          <div>
+            <div className="bp-count bp-stat-num bp-mont" data-count="50" data-suffix="K+">50K+</div>
+            <div className="bp-stat-label">{t('stat_users')}</div>
+          </div>
+          <div className="bp-stat-divider" />
+          <div>
+            <div className="bp-count bp-stat-num bp-mont" data-count="99.9" data-decimals="1" data-suffix="%">99.9%</div>
+            <div className="bp-stat-label">{t('stat_uptime')}</div>
+          </div>
+          <div className="bp-stat-divider" />
+          <div>
+            <div className="bp-stat-num bp-mont">24/7</div>
+            <div className="bp-stat-label">{t('stat_support')}</div>
           </div>
         </div>
       </div>
 
-      <div className="scroll-indicator">
-        <div className="scroll-text">Scroll to explore</div>
-        <div className="scroll-arrow">
-          <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-            <path d="M7 13L12 18L17 13M7 6L12 11L17 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </div>
+      <div className="bp-visual">
+        <div className="bp-visual-glow" />
+        <div className="bp-visual-ring" />
+        <Image
+          src="/Artboard.webp"
+          alt={`BantuPay – ${t('headline_1')} ${t('headline_2')} ${t('headline_3')}`}
+          width={900}
+          height={700}
+          priority
+          fetchPriority="high"
+          className="bp-hero-img"
+          sizes="(max-width: 860px) 90vw, 50vw"
+          quality={82}
+        />
+      </div>
+
+      <div className="bp-scroll bp-mont">
+        <span className="bp-scroll-label">Scroll</span>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ animation: 'bpChev 1.8s ease-in-out infinite' }}>
+          <path d="M6 9l6 6 6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+        </svg>
       </div>
     </section>
   );

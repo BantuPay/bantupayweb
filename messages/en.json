@@ -4,10 +4,37 @@
       "about": "Go to the about page"
     },
     "IntroPage":{
-      "badge": "Next Generation Payment",
+      "badge": "Next-generation payment",
       "title": "Your Mobile Banking",
       "title2": "Who Assures",
-      "description": "Send & Receive money instantly. Pay for goods and services between BantuPay users."
+      "headline_1": "Your money,",
+      "headline_2": "moving at the",
+      "headline_3": "speed of trust.",
+      "description": "Send and receive money instantly, and pay for goods and services between BantuPay users — mobile banking built to move without friction, across the D.R. Congo and beyond.",
+      "cta_primary": "Get Started",
+      "cta_secondary": "Learn more",
+      "get_app": "Get the App",
+      "nav_features": "Features",
+      "nav_pricing": "Pricing",
+      "nav_about": "About",
+      "nav_contact": "Contact",
+      "stat_users": "Active users",
+      "stat_uptime": "Uptime",
+      "stat_support": "Support"
+    },
+    "HowPage":{
+      "badge": "Get started in three steps",
+      "step1_title": "Create your wallet",
+      "step1_description": "Sign up in minutes with just your phone number — no branch visit, no paperwork.",
+      "step2_title": "Fund it your way",
+      "step2_description": "Top up with any Visa card or deposit cash at a local BantuPay agent near you.",
+      "step3_title": "Send instantly",
+      "step3_description": "Move money to family and pay for services the moment you need to — as easy as a message."
+    },
+    "FooterPage":{
+      "rights": "© 2026 BantuPay Ltd. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms & Conditions"
     },
       "AboutPage": {
           "title": "About Bantu Pay",
@@ -16,6 +43,7 @@
           "freedom": "Freedom",
           "story_title": "Our Story",
           "mission_title": "Our Mission",
+          "mission_headline": "Financial freedom, no matter where you are.",
           "pillars_section_title": "The Pillars of BantuPay",
           "image_alt": "Contemporary illustration symbolizing the fusion of African heritage and modern fintech",
           "story_blocks": [
@@ -61,8 +89,8 @@
       
         "FeaturesPage": {
           "badge": "Features",
-          "title": "Features In This App",
-          "subtitle": "Your Digital Transactions Are Going To Be Smoother With These Game-Changing Additions",
+          "title": "Everything you need, in one app.",
+          "subtitle": "Your digital transactions are going to be smoother with these game-changing additions.",
           "feature1_title": "Low Transaction Fees",
           "feature1_description": "Low Sending Fee Even Lower Withdrawing Fee",
           "feature2_title": "Instant Money Transfer",
@@ -137,9 +165,9 @@
         "PricingPage_Business_Feature5": "Top Up Your Account With Any Visa Card",
         "PricingPage_Business_Feature6": "Top Up Mobile Credit",
         "PricingPage_Business_Feature7": "Low Monthly Fee",
-         "header_badge": "Pricing Plans",
-         "title": "Choose Your Plan",
-         "description": "Select the perfect plan that fits your financial needs and goals",
+         "header_badge": "Pricing plans",
+         "title": "Choose your plan.",
+         "description": "Six account plans, each with its own unique features. Select the one that fits your needs.",
          "features_header": "Features",
          "pricing_header": "Pricing",
          "most_popular": "Most Popular",
@@ -178,17 +206,19 @@
           
         },
     "CarouselPages":{
-      "badge": "What's Inside The App",
-      "title":"App Screenshots",
+      "badge": "App screenshots",
+      "title":"See it for yourself.",
       "description":"What’s Inside The App?",
-      "description2":"See For Yourself!"
+      "description2":"A look inside the BantuPay experience.",
+      "scroll_hint":"Scroll to explore"
     },
 
     "MapPages":{
-      "badge": "Global Coverage",
-      "title":"Where We Operate From",
-      "description":"You Can Access The BantuPay Service If You Reside In:",
-      "description2":"Europe – UK – USA – Canada – D.R.Congo"
+      "badge": "Global coverage",
+      "title":"Where we operate.",
+      "description":"You can access the BantuPay service if you reside in any of these regions.",
+      "description2":"Europe – UK – USA – Canada – D.R.Congo",
+      "regions": ["Europe", "United Kingdom", "USA", "Canada", "D.R. Congo"]
     },
 
     "ContactPages":{

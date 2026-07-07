@@ -4,32 +4,39 @@ import { useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
 
 export default function LangSwitch() {
-    const router = useRouter();
-    const localActive = useLocale();
+  const router = useRouter();
+  const localActive = useLocale();
 
-    // Function to toggle between languages
-    const handleToggle = () => {
-        const nextLocale = localActive === 'en' ? 'fr' : 'en';
-        router.replace(`/${nextLocale}`);
-    };
+  const setLocale = (locale) => {
+    if (locale !== localActive) router.replace(`/${locale}`);
+  };
 
-    return (
-        <div className="language-toggle-switch" onClick={handleToggle}>
-            {/* Toggle Switch Container */}
-            <div className="toggle-container">
-                {/* Left Flag (English) */}
-                <div className={`flag-option left ${localActive === 'en' ? 'active' : 'inactive'}`}>
-                    <span className="flag-emoji">🇺🇸</span>
-                </div>
-                
-                {/* Toggle Slider */}
-                <div className={`toggle-slider ${localActive === 'fr' ? 'slide-right' : 'slide-left'}`}></div>
-                
-                {/* Right Flag (French) */}
-                <div className={`flag-option right ${localActive === 'fr' ? 'active' : 'inactive'}`}>
-                    <span className="flag-emoji">🇫🇷</span>
-                </div>
-            </div>
-        </div>
-    );
+  return (
+    <div
+      className="bp-lang bp-mont"
+      role="group"
+      aria-label="Language"
+    >
+      <span
+        role="button"
+        tabIndex={0}
+        aria-pressed={localActive === 'en'}
+        className={localActive === 'en' ? 'bp-lang-active' : ''}
+        onClick={() => setLocale('en')}
+        onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setLocale('en')}
+      >
+        EN
+      </span>
+      <span
+        role="button"
+        tabIndex={0}
+        aria-pressed={localActive === 'fr'}
+        className={localActive === 'fr' ? 'bp-lang-active' : ''}
+        onClick={() => setLocale('fr')}
+        onKeyDown={(e) => (e.key === 'Enter' || e.key === ' ') && setLocale('fr')}
+      >
+        FR
+      </span>
+    </div>
+  );
 }

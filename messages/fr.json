@@ -7,7 +7,34 @@
       "badge": "Paiement nouvelle génération",
       "title": "Votre banque mobile",
       "title2": "Qui assure",
-      "description": "Envoyez et recevez de l'argent instantanément. Payez des biens et services entre utilisateurs de BantuPay."
+      "headline_1": "Votre argent,",
+      "headline_2": "à la vitesse",
+      "headline_3": "de la confiance.",
+      "description": "Envoyez et recevez de l'argent instantanément, et payez biens et services entre utilisateurs BantuPay — une banque mobile pensée pour circuler sans friction, en R.D. Congo et au-delà.",
+      "cta_primary": "Commencer",
+      "cta_secondary": "En savoir plus",
+      "get_app": "Obtenir l'app",
+      "nav_features": "Fonctionnalités",
+      "nav_pricing": "Tarifs",
+      "nav_about": "À propos",
+      "nav_contact": "Contact",
+      "stat_users": "Utilisateurs actifs",
+      "stat_uptime": "Disponibilité",
+      "stat_support": "Support"
+    },
+    "HowPage": {
+      "badge": "Commencez en trois étapes",
+      "step1_title": "Créez votre portefeuille",
+      "step1_description": "Inscrivez-vous en quelques minutes avec votre numéro de téléphone — sans agence, sans paperasse.",
+      "step2_title": "Alimentez-le à votre façon",
+      "step2_description": "Rechargez avec n'importe quelle carte Visa ou déposez des espèces chez un agent BantuPay près de chez vous.",
+      "step3_title": "Envoyez instantanément",
+      "step3_description": "Envoyez de l'argent à vos proches et payez vos services au moment voulu — aussi simple qu'un message."
+    },
+    "FooterPage": {
+      "rights": "© 2026 BantuPay Ltd. Tous droits réservés.",
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions générales"
     },
       "AboutPage": {
       "title": "À propos de Bantu Pay",
@@ -16,6 +43,7 @@
       "freedom": "la Liberté Financière",
       "story_title": "Notre Histoire",
       "mission_title": "Notre Mission",
+      "mission_headline": "La liberté financière, où que vous soyez.",
       "pillars_section_title": "Les Piliers de BantuPay",
       "image_alt": "Illustration contemporaine symbolisant la fusion entre l'héritage africain et la fintech moderne",
       "story_blocks": [
@@ -61,8 +89,8 @@
     
       "FeaturesPage": {
         "badge": "Fonctionnalités",
-        "title": "Fonctionnalités de cette application",
-        "subtitle": "Vos transactions numériques seront plus fluides avec ces ajouts révolutionnaires",
+        "title": "Tout ce dont vous avez besoin, dans une seule app.",
+        "subtitle": "Vos transactions numériques seront plus fluides avec ces ajouts révolutionnaires.",
         "feature1_title": "Frais de transaction réduits",
         "feature1_description": "Frais d'envoi bas, frais de retrait encore plus bas",
         "feature2_title": "Transfert d'argent instantané",
@@ -136,9 +164,9 @@
     "PricingPage_Business_Feature5": "Rechargez Votre Compte Avec N'importe Quelle Carte Visa",
     "PricingPage_Business_Feature6": "Rechargez Votre Crédit Mobile",
     "PricingPage_Business_Feature7": "Faible Frais Mensuel",
-    "header_badge": "Plans de Tarification",
-    "title": "Choisissez Votre Plan",
-    "description": "Sélectionnez le plan parfait qui correspond à vos besoins et objectifs financiers",
+    "header_badge": "Plans de tarification",
+    "title": "Choisissez votre plan.",
+    "description": "Six plans de compte, chacun avec ses fonctionnalités uniques. Choisissez celui qui vous convient.",
     "features_header": "Fonctionnalités",
     "pricing_header": "Tarification",
     "most_popular": "Le Plus Populaire",
@@ -176,16 +204,18 @@
   },
 
   "CarouselPages": {
-  "badge": "Contenu de l'application",
-  "title": "Captures d'écran de l'application",
+  "badge": "Captures d'écran",
+  "title": "Voyez par vous-même.",
   "description": "Que contient l'application ?",
-  "description2": "Voyez par vous-même !"
+  "description2": "Un aperçu de l'expérience BantuPay.",
+  "scroll_hint": "Faites défiler pour explorer"
 },
 "MapPages": {
   "badge": "Couverture mondiale",
-  "title": "Où nous opérons",
-  "description": "Vous pouvez accéder au service BantuPay si vous résidez dans :",
-  "description2": "Europe – Royaume-Uni – USA – Canada – R.D. Congo"
+  "title": "Où nous opérons.",
+  "description": "Vous pouvez accéder au service BantuPay si vous résidez dans l'une de ces régions.",
+  "description2": "Europe – Royaume-Uni – USA – Canada – R.D. Congo",
+  "regions": ["Europe", "Royaume-Uni", "USA", "Canada", "R.D. Congo"]
 },
 
 "ContactPages": {

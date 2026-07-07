@@ -1,83 +1,34 @@
-import Link from "next/link";
-import Image from "next/image";
-import LangSwitch from "./ui/lang-switcher";
+import Image from 'next/image';
+import { getTranslations } from 'next-intl/server';
+import LangSwitch from './ui/lang-switcher';
 
-const socialLinks = [
-  { href: "https://www.facebook.com/BantuPayLTD?_rdc=1&_rdr", icon: "/facebook.svg", label: "Facebook" },
-  { href: "https://x.com/bantupayltd?s=11", icon: null, label: "X (Twitter)" },
-  { href: "https://www.instagram.com/bantu_pay/", icon: "/insta2.svg", label: "Instagram" },
-  { href: "https://www.linkedin.com/company/bantu-payment/?trk=public_profile_topcard-current-company&originalSubdomain=uk", icon: "/linkedin.svg", label: "LinkedIn" },
-  { href: "https://www.tiktok.com/@bantu_pay", icon: "/tiktok2.svg", label: "TikTok" },
-];
+export default async function Navbar() {
+  const t = await getTranslations('IntroPage');
 
-function XIcon() {
   return (
-    <svg className="social-icon-svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-    </svg>
-  );
-}
+    <nav className="bp-nav" aria-label="Main navigation">
+      <div className="bp-nav-inner">
+        <a href="#top" className="bp-brand">
+          <Image src="/Logo.png" alt="BantuPay" width={40} height={40} priority sizes="40px" style={{ height: 40, width: 'auto' }} />
+          <span className="bp-brand-name bp-mont">BantuPay</span>
+        </a>
 
-export default function Navbar() {
-  return (
-    <nav className="navbar" aria-label="Main navigation">
-      <div className="navbar-bg-effects">
-        <div className="navbar-glow" />
-        <div className="navbar-particles">
-          <span className="particle particle-1" />
-          <span className="particle particle-2" />
-          <span className="particle particle-3" />
+        <div className="bp-nav-links bp-font-b">
+          <a href="#features">{t('nav_features')}</a>
+          <a href="#pricing">{t('nav_pricing')}</a>
+          <a href="#about">{t('nav_about')}</a>
+          <a href="#contact">{t('nav_contact')}</a>
         </div>
-      </div>
 
-      <div className="navbar-logo">
-        <div className="logo-container">
-          <Image
-            src="/Logo.png"
-            alt="Bantu Pay logo"
-            width={70}
-            height={70}
-            priority
-            sizes="70px"
-          />
-          <div className="logo-glow" />
-        </div>
-      </div>
-
-      <div className="navbar-content">
-        <div className="nav-item">
+        <div className="bp-nav-actions">
           <LangSwitch />
-        </div>
-
-        <div className="nav-divider" />
-
-        <div className="social-icons">
-          {socialLinks.map((social) => (
-            <Link
-              key={social.label}
-              href={social.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="social-link"
-              aria-label={social.label}
-            >
-              <div className="social-icon-wrapper">
-                {social.icon ? (
-                  <Image
-                    src={social.icon}
-                    alt=""
-                    width={18}
-                    height={18}
-                    className="social-icon-img"
-                    aria-hidden="true"
-                  />
-                ) : (
-                  <XIcon />
-                )}
-                <div className="social-ripple" />
-              </div>
-            </Link>
-          ))}
+          <button
+            type="button"
+            className="magnetic bp-btn-primary bp-cta bp-nav-cta bp-mont"
+            style={{ fontSize: 14, borderRadius: 999, padding: '11px 22px', boxShadow: '0 6px 18px rgba(86,35,21,0.22)' }}
+          >
+            <span>{t('get_app')}</span>
+          </button>
         </div>
       </div>
     </nav>

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "baseUrl": "..",
+    "paths": {
+      "@/*": ["src/*"],
+      "next/image": ["./.design-sync/shims/next-image.jsx"],
+      "next/link": ["./.design-sync/shims/next-link.jsx"],
+      "next/navigation": ["./.design-sync/shims/next-navigation.js"],
+      "next/dynamic": ["./.design-sync/shims/next-dynamic.jsx"],
+      "next-intl/server": ["./.design-sync/shims/next-intl-server.js"],
+      "server-only": ["./.design-sync/shims/empty.js"]
+    }
+  }
+}

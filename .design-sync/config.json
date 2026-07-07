@@ -1,0 +1,24 @@
+{
+  "pkg": "my-nextjs-app",
+  "globalName": "Bantupay",
+  "shape": "package",
+  "entry": "./.design-sync/entry.jsx",
+  "srcDir": "src",
+  "tsconfig": "./.design-sync/tsconfig.bundle.json",
+  "cssEntry": ".design-sync/ds-styles.css",
+  "provider": { "component": "DsProvider" },
+  "componentSrcMap": {
+    "SectionHeader": "src/app/components/SectionHeader.jsx",
+    "FullWidthCarousel": "src/app/components/carousel.jsx",
+    "ContactForm": "src/app/components/contact.jsx",
+    "Map": "src/app/components/map.jsx",
+    "PreSignUpForm": "src/app/components/signup.jsx",
+    "Navbar": "src/app/components/navBar.jsx",
+    "LangSwitch": "src/app/components/ui/lang-switcher.jsx",
+    "HomeBelowFold": "src/app/components/HomeBelowFold.jsx",
+    "About": "src/app/components/About.jsx",
+    "FeaturesSection": "src/app/components/Features.jsx",
+    "Intro": "src/app/components/Intro.jsx",
+    "Pricing": "src/app/components/Pricingss.jsx"
+  }
+}

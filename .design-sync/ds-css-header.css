@@ -1,0 +1,7 @@
+/* design-sync: brand font wiring for preview/import (families next/font loads at runtime in-app) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&family=Pacifico&display=swap');
+:root {
+  --font-inter: 'Inter';
+  --font-montserrat: 'Montserrat';
+  --font-pacifico: 'Pacifico';
+}
