@@ -1,5 +1,6 @@
-import { Inter, Montserrat, Pacifico } from 'next/font/google';
+import { Inter, Sora, Dancing_Script } from 'next/font/google';
 
+// Body / UI text
 export const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
@@ -7,17 +8,20 @@ export const inter = Inter({
   preload: true,
 });
 
-export const montserrat = Montserrat({
+// Display / headings, kickers, buttons, brand — the site's primary voice
+export const sora = Sora({
   subsets: ['latin'],
+  weight: ['500', '600', '700', '800'],
   display: 'swap',
-  variable: '--font-montserrat',
+  variable: '--font-sora',
   preload: true,
 });
 
-export const pacifico = Pacifico({
+// Expressive script accent for section subtitles
+export const dancingScript = Dancing_Script({
   subsets: ['latin'],
-  weight: '400',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
-  variable: '--font-pacifico',
+  variable: '--font-dancing',
   preload: true,
 });

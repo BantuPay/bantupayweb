@@ -34,7 +34,7 @@ export default function PreSignUpForm() {
         <div className="bp-reveal">
           <span className="bp-mission-eyebrow bp-mont">{t('badge')}</span>
           <h2 className="bp-h2 bp-h2-light bp-mont" style={{ margin: '14px 0 16px' }}>{t('pre_signup_title')}</h2>
-          <p style={{ fontSize: 16, lineHeight: 1.65, color: '#EDE0D4' }}>{t('pre_signup_description')}</p>
+          <p className="bp-subhead" style={{ fontSize: 'clamp(1.35rem, 1rem + 1vw, 1.7rem)', color: '#EDE0D4' }}>{t('pre_signup_description')}</p>
         </div>
 
         <form className="bp-reveal bp-form" onSubmit={handleSubmit}>

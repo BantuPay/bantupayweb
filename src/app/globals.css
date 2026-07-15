@@ -1452,7 +1452,7 @@ body {
   color: #562315;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-family: var(--font-sora), 'Sora', sans-serif;
 }
 
 .badge-glow {
@@ -1479,7 +1479,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-family: var(--font-sora), 'Sora', sans-serif;
 }
 
 .title-brand {
@@ -2122,7 +2122,7 @@ body {
 }
 
 .features-badge .badge-text {
-  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-family: var(--font-sora), 'Sora', sans-serif;
   font-size: 14px;
   font-weight: 600;
   color: #F7F0E7;
@@ -2136,7 +2136,7 @@ body {
   line-height: 1.1;
   margin-bottom: 24px;
   color: #F7F0E7;
-  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-family: var(--font-sora), 'Sora', sans-serif;
 }
 
 .features-subtitle {
@@ -2256,7 +2256,7 @@ body {
   color: #562315;
   margin-bottom: 12px;
   line-height: 1.3;
-  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-family: var(--font-sora), 'Sora', sans-serif;
 }
 
 .feature-description {
@@ -2483,7 +2483,7 @@ body {
   padding: 0.25rem 1rem;
   border: 1px solid rgba(66, 25, 4, 0.25);
   border-radius: 9999px;
-  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-family: var(--font-sora), 'Sora', sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -2493,7 +2493,7 @@ body {
 }
 
 .section-title {
-  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-family: var(--font-sora), 'Sora', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
   line-height: 1.15;
@@ -2511,7 +2511,7 @@ body {
 }
 
 .section-heading {
-  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-family: var(--font-sora), 'Sora', sans-serif;
   font-size: clamp(1.25rem, 2.5vw, 1.5rem);
   font-weight: 700;
   line-height: 1.25;
@@ -2528,7 +2528,7 @@ body {
 }
 
 .section-label {
-  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-family: var(--font-sora), 'Sora', sans-serif;
   font-size: 0.875rem;
   font-weight: 600;
   color: #421904;
@@ -2558,18 +2558,18 @@ body {
 
 .stat-number,
 .cta-text {
-  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-family: var(--font-sora), 'Sora', sans-serif;
 }
 
 .title-brand,
 .title-main,
 .title-accent {
-  font-family: var(--font-montserrat), 'Montserrat', sans-serif;
+  font-family: var(--font-sora), 'Sora', sans-serif;
 }
 
 /* ============================================================
    BantuPay modern redesign (bp-*) — GSAP-driven homepage
-   Fonts: --font-montserrat (headings/labels), --font-inter (body)
+   Fonts: --font-sora (headings/labels/UI), --font-inter (body), --font-dancing (subtitle accent)
    ============================================================ */
 .bp-root {
   position: relative;
@@ -2579,7 +2579,27 @@ body {
   --bp-accent: #8b3d27;
   font-family: var(--font-inter), 'Inter', sans-serif;
 }
-.bp-mont { font-family: var(--font-montserrat), 'Montserrat', sans-serif; }
+.bp-mont { font-family: var(--font-sora), 'Sora', sans-serif; }
+
+/* ---- Typography consistency ----
+   One display voice (Sora) across headings, card titles, kickers, UI.
+   Big display headings tuned tighter; smaller titles share a scale. */
+.bp-h1, .bp-h2, .bp-mission-title, .bp-pillars-title {
+  font-family: var(--font-sora), 'Sora', sans-serif;
+  letter-spacing: -0.025em;
+}
+.bp-step-title, .bp-story-title, .bp-feat h3, .bp-pillar h4, .bp-plan-head {
+  font-family: var(--font-sora), 'Sora', sans-serif;
+  letter-spacing: -0.012em;
+  line-height: 1.25;
+}
+/* Kickers / overlines — uniform tracking + weight across every section */
+.bp-eyebrow-text, .bp-mission-eyebrow, .bp-feat-badge .txt,
+.bp-shots-hint, .bp-scroll-label {
+  font-family: var(--font-sora), 'Sora', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
 
 /* decorative background */
 .bp-bg { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
@@ -2619,9 +2639,22 @@ body {
 .bp-nav-links { display: flex; align-items: center; gap: 36px; }
 .bp-nav-links a { font-size: 14.5px; font-weight: 500; color: #52443e; }
 .bp-nav-links a:hover { color: #8b3d27; }
-.bp-nav-actions { display: flex; align-items: center; gap: 16px; }
+.bp-nav-actions { display: flex; align-items: center; gap: 16px; min-width: 0; }
 @media (max-width: 900px) { .bp-nav-links { display: none; } }
-@media (max-width: 560px) { .bp-nav-cta { display: none; } }
+/* Compact spacing so the brand never collides with the language pill on phones. */
+@media (max-width: 560px) {
+  .bp-nav-inner { padding: 14px 18px; gap: 12px; }
+  .bp-nav.bp-nav-scrolled .bp-nav-inner { padding: 11px 18px; }
+  .bp-nav-actions { gap: 10px; }
+  /* Higher specificity than .bp-btn-primary so the CTA actually hides. */
+  .bp-nav-actions .bp-nav-cta { display: none; }
+  /* Keep the fixed nav legible over hero content on mobile. */
+  .bp-nav { background: rgba(247,240,231,0.82); backdrop-filter: blur(10px); }
+}
+@media (max-width: 360px) {
+  .bp-nav-inner { padding: 12px 14px; }
+  .bp-brand-name { font-size: 17px; }
+}
 
 /* language pill */
 .bp-lang {
@@ -2657,7 +2690,21 @@ body {
 .bp-h1 { font-weight: 800; font-size: clamp(2.7rem, 5.2vw, 4.5rem); line-height: 1.02; letter-spacing: -0.02em; color: #2d1810; }
 .bp-line-mask { display: block; overflow: hidden; padding-bottom: 0.08em; }
 .bp-accent-text { color: var(--bp-accent, #8b3d27); }
-.bp-lead { font-size: 18.5px; line-height: 1.6; color: #6b5b4f; max-width: 470px; }
+/* Hand-drawn accent underline under the hero's brand line (animated via DrawSVG) */
+.bp-accent-underline {
+  display: block; width: min(340px, 66%); height: auto; margin: -6px 0 -2px;
+  color: var(--bp-accent, #8b3d27); overflow: visible;
+}
+.bp-lead { font-size: clamp(1.5rem, 1.05rem + 1.3vw, 2rem); line-height: 1.45; color: #6b5b4f; max-width: 500px; }
+
+/* Section subtitles: expressive Dancing Script accent under each heading. */
+.bp-lead, .bp-about-lead, .bp-features-sub, .bp-subhead {
+  font-family: var(--font-dancing), 'Dancing Script', 'Segoe Script', cursive;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+.bp-subhead { line-height: 1.4; }
+
 .bp-cta-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .bp-hero .bp-btn-primary { font-size: 16px; border-radius: 14px; padding: 16px 30px; box-shadow: 0 10px 26px rgba(86,35,21,0.28); }
 .bp-hero .bp-btn-ghost { font-size: 16px; border-radius: 14px; padding: 15px 26px; }
@@ -2682,7 +2729,15 @@ body {
 .bp-h2-light { color: #f7f0e7; }
 
 /* ---- HOW IT WORKS ---- */
-.bp-how { position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 60px 32px 120px; }
+.bp-how { position: relative; z-index: 3; max-width: 1240px; margin: 0 auto; padding: 90px 32px 120px; }
+/* Full-width panel that rises to cover the pinned hero as you scroll into the steps */
+.bp-how::before {
+  content: ''; position: absolute; z-index: -1;
+  top: 0; bottom: -1px; left: 50%; transform: translateX(-50%);
+  width: 100vw; background: #f7f0e7;
+  border-top-left-radius: 44px; border-top-right-radius: 44px;
+  box-shadow: 0 -26px 55px rgba(35,14,6,0.10);
+}
 .bp-how-head { display: flex; align-items: center; gap: 14px; margin-bottom: 44px; }
 .bp-how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
 .bp-step-card { background: #fbf9f4; border: 1px solid #e4d8cc; border-radius: 20px; padding: 34px 30px; }
@@ -2693,9 +2748,29 @@ body {
 
 /* ---- ABOUT ---- */
 .bp-about { position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 100px 32px; }
-.bp-about-lead { font-size: 17px; line-height: 1.65; color: #6b5b4f; max-width: 620px; margin-bottom: 56px; }
+/* Opaque full-width backing so the pinned hero can never bleed through as About rises */
+.bp-about::before {
+  content: ''; position: absolute; z-index: -1;
+  top: 0; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 100vw; background: #f7f0e7;
+}
+.bp-about-lead { font-size: clamp(1.4rem, 1rem + 1.1vw, 1.85rem); line-height: 1.45; color: #6b5b4f; max-width: 640px; margin-bottom: 56px; }
 .bp-about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 48px; align-items: center; }
-.bp-about-illus { position: relative; border-radius: 24px; overflow: hidden; background: radial-gradient(circle at 50% 40%, #3a1a0a, #1c0d05); aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; padding: 8%; }
+/* Brand emblem: original terracotta logo on a dark backdrop with a soft lift */
+.bp-about-illus {
+  position: relative; border-radius: 28px; overflow: hidden;
+  background: radial-gradient(circle at 50% 38%, #4a2410 0%, #2a1206 56%, #180901 100%);
+  border: 1px solid rgba(255,255,255,0.08);
+  aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center;
+  padding: 11%;
+}
+/* faint dot texture, echoing the hero background */
+.bp-about-illus::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: radial-gradient(#fff 0.6px, transparent 0.6px);
+  background-size: 22px 22px; opacity: 0.04;
+}
+.bp-about-illus img { position: relative; z-index: 2; }
 .bp-story-title { font-weight: 700; font-size: 1.5rem; color: #2d1810; margin-bottom: 20px; }
 .bp-story-body { display: flex; flex-direction: column; gap: 16px; font-size: 15.5px; line-height: 1.7; color: #52443e; }
 .bp-mission { margin-top: 64px; border-radius: 24px; overflow: hidden; display: grid; grid-template-columns: 0.8fr 1.2fr; background: linear-gradient(135deg, #421904, #6b2d1a); }
@@ -2725,7 +2800,7 @@ body {
 .bp-feat-badge { display: inline-flex; align-items: center; gap: 10px; padding: 7px 18px; border: 1px solid rgba(247,240,231,0.25); border-radius: 999px; margin-bottom: 20px; }
 .bp-feat-badge .dot { width: 7px; height: 7px; border-radius: 50%; background: #ffb693; display: block; }
 .bp-feat-badge .txt { font-weight: 600; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: #f7f0e7; }
-.bp-features-sub { font-size: 16.5px; line-height: 1.6; color: #ede0d4; margin-top: 16px; }
+.bp-features-sub { font-size: clamp(1.35rem, 1rem + 1vw, 1.75rem); line-height: 1.4; color: #ede0d4; margin-top: 16px; }
 .bp-features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 .bp-feat { background: #fbf9f4; border-radius: 20px; padding: 30px 24px; transition: box-shadow .3s ease; }
 .bp-feat-icon { width: 64px; height: 64px; border-radius: 16px; background: #ffdbcc; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
@@ -2747,8 +2822,12 @@ body {
 .bp-label-cell { padding: 16px 20px; min-height: 54px; display: flex; align-items: center; font-size: 13.5px; font-weight: 600; color: #562315; border-top: 1px solid #eee6dc; }
 .bp-label-foot { padding: 18px 20px; background: linear-gradient(135deg, #421904, #8b3d27); color: #f7f0e7; font-weight: 700; font-size: 0.95rem; border-top: 1px solid #eee6dc; }
 .bp-plan-head { padding: 30px 12px 18px; background: linear-gradient(135deg, #421904, #8b3d27); color: #fff; text-align: center; min-height: 96px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; font-weight: 800; font-size: 1rem; }
-.bp-cell { padding: 16px; min-height: 54px; display: flex; align-items: center; justify-content: center; border-top: 1px solid #eee6dc; }
-.bp-dash { color: #c6a99b; font-size: 18px; }
+.bp-cell { padding: 16px; height: 56px; line-height: 1; display: flex; align-items: center; justify-content: center; border-top: 1px solid #eee6dc; box-sizing: border-box; }
+.bp-dash { color: #c6a99b; font-size: 18px; line-height: 1; }
+/* Keep every row the same height and pin the price row flush to the bottom so
+   the foot lines up across all plans regardless of check/dash pattern. */
+.bp-label-cell { height: 56px; box-sizing: border-box; }
+.bp-label-foot, .bp-plan-foot { margin-top: auto; }
 .bp-plan-foot { padding: 18px 12px; background: linear-gradient(135deg, #421904, #8b3d27); color: #fff; text-align: center; font-weight: 700; font-size: 0.95rem; border-top: 1px solid #eee6dc; }
 
 /* ---- APP SCREENSHOTS (pinned horizontal / coverflow) ---- */
@@ -2759,9 +2838,18 @@ body {
 .bp-shots-bar { height: 100%; width: 8%; background: linear-gradient(90deg, #8b3d27, #421904); border-radius: 999px; }
 .bp-shots-hint { font-weight: 600; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b7355; }
 .bp-shots-viewport { overflow: hidden; padding: 12px 0 30px; }
-.bp-shots-track { display: flex; gap: 24px; padding: 0 32px; width: max-content; }
-.bp-shot { flex: none; width: 300px; height: auto; border-radius: 26px; box-shadow: 0 18px 40px rgba(86,35,21,0.14); will-change: transform, opacity; }
+.bp-shots-track { display: flex; gap: 28px; padding: 0 32px; width: max-content; align-items: center; }
+.bp-shot { flex: none; will-change: transform, opacity; }
+/* Each screenshot lives inside an iPhone frame (SVG bezel over the image) */
+.bp-phone {
+  position: relative; width: 300px; aspect-ratio: 300 / 446;
+  border-radius: 44px; overflow: hidden; background: #050505;
+  box-shadow: 0 22px 48px rgba(35,14,6,0.28);
+}
+.bp-phone-img { object-fit: cover; }
+.bp-phone-frame { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; }
 .bp-shots.is-static .bp-shots-viewport { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+@media (max-width: 520px) { .bp-phone { width: 250px; } }
 
 /* ---- COVERAGE ---- */
 .bp-coverage { position: relative; z-index: 2; max-width: 1240px; margin: 0 auto; padding: 100px 32px; text-align: center; }

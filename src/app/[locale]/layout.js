@@ -2,7 +2,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
-import { inter, montserrat, pacifico } from '@/lib/fonts';
+import { inter, sora, dancingScript } from '@/lib/fonts';
 import JsonLd from '@/app/components/JsonLd';
 import "@/app/globals.css";
 
@@ -77,7 +77,7 @@ export default async function LocaleLayout({ children, params }) {
   return (
     <html
       lang={locale}
-      className={`${inter.variable} ${montserrat.variable} ${pacifico.variable}`}
+      className={`${inter.variable} ${sora.variable} ${dancingScript.variable}`}
     >
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />

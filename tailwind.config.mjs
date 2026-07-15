@@ -8,8 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'manuka': ['var(--font-pacifico)', 'Pacifico', 'cursive'],
-        'feature': ['var(--font-montserrat)', 'Montserrat', 'system-ui', '-apple-system', 'sans-serif'],
+        'display': ['var(--font-sora)', 'Sora', 'system-ui', '-apple-system', 'sans-serif'],
+        'script': ['var(--font-dancing)', 'Dancing Script', 'cursive'],
+        'feature': ['var(--font-sora)', 'Sora', 'system-ui', '-apple-system', 'sans-serif'],
         'sohne': ['var(--font-inter)', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
       },
       colors: {

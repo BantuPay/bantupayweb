@@ -32,7 +32,7 @@ export default function ContactForm() {
             <span className="bp-eyebrow-text bp-mont">{t('badge')}</span>
           </div>
           <h2 className="bp-h2 bp-mont" style={{ marginBottom: 16 }}>{t('title')}</h2>
-          <p style={{ fontSize: 16.5, lineHeight: 1.65, color: '#6B5B4F', maxWidth: 420 }}>{t('description')}</p>
+          <p className="bp-subhead" style={{ fontSize: 'clamp(1.4rem, 1rem + 1.1vw, 1.75rem)', color: '#6B5B4F', maxWidth: 460 }}>{t('description')}</p>
         </div>
 
         <form className="bp-reveal bp-contact-form" onSubmit={handleSubmit}>

@@ -20,6 +20,53 @@ const images = [
   '/carousel9.webp',
 ];
 
+/**
+ * A single app screenshot wrapped in an inline iPhone frame SVG: the screenshot
+ * fills the body, and the vector bezel (with a cut-out screen, Dynamic Island,
+ * titanium rim and side buttons) is layered on top. Keeps the `.bp-shot` class
+ * on the wrapper so the coverflow GSAP driver transforms the whole device.
+ */
+function PhoneShot({ src, alt, eager, index }) {
+  const uid = `bp-phone-${index}`;
+  return (
+    <div className="bp-shot bp-phone">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        sizes="300px"
+        quality={80}
+        className="bp-phone-img"
+        loading={eager ? 'eager' : 'lazy'}
+      />
+      <svg className="bp-phone-frame" viewBox="0 0 300 446" fill="none" aria-hidden="true" preserveAspectRatio="none">
+        <defs>
+          <mask id={`${uid}-screen`}>
+            <rect width="300" height="446" rx="44" fill="#fff" />
+            <rect x="10" y="12" width="280" height="422" rx="32" fill="#000" />
+          </mask>
+          <linearGradient id={`${uid}-bezel`} x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stopColor="#26262a" />
+            <stop offset="0.5" stopColor="#0c0c0e" />
+            <stop offset="1" stopColor="#000" />
+          </linearGradient>
+        </defs>
+        {/* bezel with the screen cut out so the screenshot shows through */}
+        <rect width="300" height="446" rx="44" fill={`url(#${uid}-bezel)`} mask={`url(#${uid}-screen)`} />
+        {/* titanium rim highlights */}
+        <rect x="1" y="1" width="298" height="444" rx="43" stroke="rgba(255,255,255,0.16)" strokeWidth="1.5" />
+        <rect x="4.5" y="4.5" width="291" height="437" rx="39.5" stroke="rgba(0,0,0,0.55)" strokeWidth="1" />
+        {/* side buttons */}
+        <rect x="0" y="150" width="2.5" height="34" rx="1.25" fill="#1a1a1c" />
+        <rect x="0" y="196" width="2.5" height="34" rx="1.25" fill="#1a1a1c" />
+        <rect x="297.5" y="176" width="2.5" height="58" rx="1.25" fill="#1a1a1c" />
+        {/* Dynamic Island */}
+        <rect x="113" y="23" width="74" height="23" rx="11.5" fill="#000" />
+      </svg>
+    </div>
+  );
+}
+
 export default function ScreenshotsCarousel() {
   const t = useTranslations('CarouselPages');
   const sectionRef = useRef(null);
@@ -54,7 +101,12 @@ export default function ScreenshotsCarousel() {
         });
       };
 
-      const canPin = !reduce && track.scrollWidth > window.innerWidth;
+      // Pin + horizontal scrub is a desktop flourish; on small/touch screens fall
+      // back to native horizontal swipe so the page never feels "stuck".
+      const isDesktop =
+        window.matchMedia('(min-width: 861px)').matches &&
+        window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      const canPin = !reduce && isDesktop && track.scrollWidth > window.innerWidth;
 
       if (!canPin) {
         // Fallback: native horizontal scroll, no coverflow transforms.
@@ -104,16 +156,12 @@ export default function ScreenshotsCarousel() {
       <div className="bp-shots-viewport">
         <div ref={trackRef} className="bp-shots-track">
           {images.map((src, index) => (
-            <Image
+            <PhoneShot
               key={src}
               src={src}
               alt={`${t('title')} ${index + 1}`}
-              width={300}
-              height={450}
-              className="bp-shot"
-              sizes="300px"
-              quality={80}
-              loading={index < 3 ? 'eager' : 'lazy'}
+              index={index}
+              eager={index < 3}
             />
           ))}
         </div>

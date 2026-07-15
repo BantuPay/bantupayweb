@@ -29,14 +29,14 @@ export default async function About() {
       <p className="bp-reveal bp-about-lead">{t('description')}</p>
 
       <div className="bp-about-grid">
-        <div className="bp-reveal bp-about-illus">
+        <div className="bp-about-illus bp-mask-illus">
           <Image
-            src="/About.png"
+            src="/About2.png"
             alt={t('image_alt')}
             width={560}
             height={560}
             className="w-full h-full"
-            style={{ objectFit: 'contain', filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.4))' }}
+            style={{ objectFit: 'contain', filter: 'drop-shadow(0 14px 34px rgba(0,0,0,0.55))' }}
             sizes="(max-width: 960px) 90vw, 420px"
           />
         </div>

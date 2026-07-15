@@ -24,6 +24,11 @@ export default async function Intro() {
           </span>
         </h1>
 
+        {/* Signature: hand-drawn underline stroke, drawn in via GSAP DrawSVG */}
+        <svg className="bp-accent-underline" viewBox="0 0 320 26" fill="none" aria-hidden="true" preserveAspectRatio="none">
+          <path d="M5 18C58 7 132 5 190 11c38 4 86 3 125-8" stroke="currentColor" strokeWidth="5" strokeLinecap="round" />
+        </svg>
+
         <p className="bp-rv bp-lead">{t('description')}</p>
 
         <div className="bp-rv bp-cta-row">
