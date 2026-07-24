@@ -1,4 +1,4 @@
-import { Inter, Sora, Dancing_Script } from 'next/font/google';
+import { Inter, Sora, Arimo } from 'next/font/google';
 
 // Body / UI text
 export const inter = Inter({
@@ -17,11 +17,12 @@ export const sora = Sora({
   preload: true,
 });
 
-// Expressive script accent for section subtitles
-export const dancingScript = Dancing_Script({
+// Clean Arial-metric sans for section subtitles
+export const arimo = Arimo({
   subsets: ['latin'],
   weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   display: 'swap',
-  variable: '--font-dancing',
+  variable: '--font-arimo',
   preload: true,
 });

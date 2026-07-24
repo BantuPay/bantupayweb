@@ -10,14 +10,15 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const images = [
-  '/carousel.webp',
-  '/carousel2.webp',
-  '/carousel3.webp',
-  '/carousel5.webp',
-  '/carousel6.webp',
-  '/carousel7.webp',
-  '/carousel%208.webp',
-  '/carousel9.webp',
+  '/carousel1.PNG',
+  '/carousel2.PNG',
+  '/carousel3.PNG',
+  '/carousel4.PNG',
+  '/carousel5.PNG',
+  '/carousel6.PNG',
+  '/carousel7.PNG',
+  '/carousel8.PNG',
+  '/carousel9.PNG',
 ];
 
 /**
@@ -30,20 +31,22 @@ function PhoneShot({ src, alt, eager, index }) {
   const uid = `bp-phone-${index}`;
   return (
     <div className="bp-shot bp-phone">
-      <Image
-        src={src}
-        alt={alt}
-        fill
-        sizes="300px"
-        quality={80}
-        className="bp-phone-img"
-        loading={eager ? 'eager' : 'lazy'}
-      />
-      <svg className="bp-phone-frame" viewBox="0 0 300 446" fill="none" aria-hidden="true" preserveAspectRatio="none">
+      <div className="bp-phone-screen">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="300px"
+          quality={80}
+          className="bp-phone-img"
+          loading={eager ? 'eager' : 'lazy'}
+        />
+      </div>
+      <svg className="bp-phone-frame" viewBox="0 0 300 630" fill="none" aria-hidden="true" preserveAspectRatio="none">
         <defs>
           <mask id={`${uid}-screen`}>
-            <rect width="300" height="446" rx="44" fill="#fff" />
-            <rect x="10" y="12" width="280" height="422" rx="32" fill="#000" />
+            <rect width="300" height="630" rx="46" fill="#fff" />
+            <rect x="10" y="12" width="280" height="606" rx="34" fill="#000" />
           </mask>
           <linearGradient id={`${uid}-bezel`} x1="0" y1="0" x2="0" y2="1">
             <stop offset="0" stopColor="#26262a" />
@@ -52,16 +55,14 @@ function PhoneShot({ src, alt, eager, index }) {
           </linearGradient>
         </defs>
         {/* bezel with the screen cut out so the screenshot shows through */}
-        <rect width="300" height="446" rx="44" fill={`url(#${uid}-bezel)`} mask={`url(#${uid}-screen)`} />
+        <rect width="300" height="630" rx="46" fill={`url(#${uid}-bezel)`} mask={`url(#${uid}-screen)`} />
         {/* titanium rim highlights */}
-        <rect x="1" y="1" width="298" height="444" rx="43" stroke="rgba(255,255,255,0.16)" strokeWidth="1.5" />
-        <rect x="4.5" y="4.5" width="291" height="437" rx="39.5" stroke="rgba(0,0,0,0.55)" strokeWidth="1" />
+        <rect x="1" y="1" width="298" height="628" rx="45" stroke="rgba(255,255,255,0.16)" strokeWidth="1.5" />
+        <rect x="4.5" y="4.5" width="291" height="621" rx="41.5" stroke="rgba(0,0,0,0.55)" strokeWidth="1" />
         {/* side buttons */}
-        <rect x="0" y="150" width="2.5" height="34" rx="1.25" fill="#1a1a1c" />
-        <rect x="0" y="196" width="2.5" height="34" rx="1.25" fill="#1a1a1c" />
-        <rect x="297.5" y="176" width="2.5" height="58" rx="1.25" fill="#1a1a1c" />
-        {/* Dynamic Island */}
-        <rect x="113" y="23" width="74" height="23" rx="11.5" fill="#000" />
+        <rect x="0" y="212" width="2.5" height="34" rx="1.25" fill="#1a1a1c" />
+        <rect x="0" y="260" width="2.5" height="34" rx="1.25" fill="#1a1a1c" />
+        <rect x="297.5" y="240" width="2.5" height="66" rx="1.25" fill="#1a1a1c" />
       </svg>
     </div>
   );

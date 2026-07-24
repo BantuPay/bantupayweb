@@ -7,9 +7,9 @@
       "badge": "Next-generation payment",
       "title": "Your Mobile Banking",
       "title2": "Who Assures",
-      "headline_1": "Your money,",
-      "headline_2": "moving at the",
-      "headline_3": "speed of trust.",
+      "headline_1": "BantuPay",
+      "headline_2": "Your mobile banking",
+      "headline_3": "that insured your funds",
       "description": "Send and receive money instantly, and pay for goods and services between BantuPay users — mobile banking built to move without friction, across the D.R. Congo and beyond.",
       "cta_primary": "Get Started",
       "cta_secondary": "Learn more",
@@ -24,12 +24,12 @@
     },
     "HowPage":{
       "badge": "Get started in three steps",
-      "step1_title": "Create your wallet",
-      "step1_description": "Sign up in minutes with just your phone number — no branch visit, no paperwork.",
+      "step1_title": "Open an account",
+      "step1_description": "Sign up in minutes just with your phone — no branch visit needed or paperwork.",
       "step2_title": "Fund it your way",
       "step2_description": "Top up with any Visa card or Mobile Money.",
-      "step3_title": "Send instantly",
-      "step3_description": "Move money to family and pay for services the moment you need to — as easy as a message."
+      "step3_title": "Send & receive money instantly",
+      "step3_description": "Send and receive money instantly from family and friends."
     },
     "FooterPage":{
       "rights": "© 2026 BantuPay Ltd. All rights reserved.",
@@ -38,7 +38,7 @@
     },
       "AboutPage": {
           "title": "About Bantu Pay",
-          "description": "A mobile banking platform built to move money instantly, securely, and without friction — for families, businesses, and communities in the D.R. Congo and beyond.",
+          "description": "A mobile banking platform built to move money instantly, securely, and without friction — for families, businesses, and communities in Africa.",
           "empowering_financial": "Empowering Financial",
           "freedom": "Freedom",
           "story_title": "Our Story",
@@ -47,16 +47,24 @@
           "pillars_section_title": "The Pillars of BantuPay",
           "image_alt": "Contemporary illustration symbolizing the fusion of African heritage and modern fintech",
           "story_blocks": [
-            "It started with a frustration many people know too well. Sending money to loved ones in the D.R. Congo is never simple. It's slow, expensive, and unpredictable. What should have been a quick act of support often turned into a stressful process, with long waits and high fees.",
-            "For families, students, and entrepreneurs, this wasn't just inconvenient. It was a real barrier. We believed it shouldn't be this way. So we built BantuPay.",
-            "A simple idea: what if sending money felt as easy as sending a message? What if anyone, whether in Kinshasa or abroad, could move money instantly, securely, and without friction?",
-            "BantuPay is more than just an app. It's a digital wallet and payment system designed for real life. It allows people to send and receive money instantly, pay for everyday services, and access cash through mobile money agents."
+            "It started with a simple question.",
+            "Why should moving money across Africa be so difficult?",
+            "Millions of people still face slow, expensive, and complicated financial services. Sending money, getting paid, or growing a business shouldn't be this hard.",
+            "So we built BantuPay.",
+            "We're creating a secure digital financial platform that enables people and businesses across Africa to send, receive, and manage money instantly and affordably.",
+            "More than a mobile banking app, BantuPay is building the financial infrastructure that connects people, businesses, and communities across the continent.",
+            "We believe where you live should never determine your access to financial opportunities.",
+            "This is the future of payments in Africa.",
+            "Fast. Secure. Borderless."
           ],
-          "mission_blocks": [
-            "For too long, access to financial services has depended on where you live, who you know, or what you have. We believe that must change.",
-            "Our mission is to break down the barriers that hold people back and replace them with simple, powerful tools that just work. Through mobile banking, we're creating a system where anyone can send, receive, and use money instantly — without friction, without limits.",
-            "For millions of people, something as basic as sending money, getting paid, or managing finances is still a challenge. Opportunities are missed. Businesses grow slower.",
-            "BantuPay exists to make financial freedom accessible to everyone, no matter their background, no matter their location. Because access to money isn't just about convenience. It's about independence. It's about building a better future."
+          "mission_left": [
+            "Access to financial services should never depend on where you live or who you know.",
+            "Our mission is to remove barriers to financial inclusion by building simple, secure, and accessible solutions that empower people and businesses across Africa to send, receive, save, and manage money with confidence."
+          ],
+          "mission_right": [
+            "Across Africa, millions of people still face barriers to making payments, getting paid, and accessing essential financial services.",
+            "BantuPay is changing that by creating a connected financial ecosystem where individuals and businesses can move money instantly, access modern banking services, and unlock new opportunities.",
+            "Because financial access isn't just about convenience—it's about opportunity, independence, and building a more inclusive future for Africa."
           ],
           "pillars": [
             {
@@ -82,7 +90,7 @@
             {
               "id": "impact",
               "title": "Our Impact",
-              "summary": "Real impact — not just in numbers, but in lives improved. We're bridging the financial gap for millions in the D.R. Congo."
+              "summary": "Real impact — not just in numbers, but in lives improved. We're bridging the financial gap for millions in Africa."
             }
           ]
       },
@@ -91,8 +99,8 @@
           "badge": "Features",
           "title": "Everything you need, in one app.",
           "subtitle": "Your digital transactions are going to be smoother with these game-changing additions.",
-          "feature1_title": "Low Transaction Fees",
-          "feature1_description": "Low Sending Fee Even Lower Withdrawing Fee",
+          "feature1_title": "Low Fees",
+          "feature1_description": "Low Top Up Fees & Withdrawing Fees",
           "feature2_title": "Instant Money Transfer",
           "feature2_description": "Send & Receive Money Instantly",
           "feature3_title": "Customer Support",
@@ -105,8 +113,8 @@
           "feature6_description": "Keep Track Of All Your Incomings & Outgoings",
           "feature7_title": "Instant Transactions",
           "feature7_description": "Pay For Goods Or Services Instantly",
-          "feature8_title": "Visa Card Support",
-          "feature8_description": "Top-Up Your Mobile Banking With Visa Card"
+          "feature8_title": "Account Top Up",
+          "feature8_description": "Top Up Your Account With a Visa Card Or Mobile Money"
         
       },
         "PricingPage":{

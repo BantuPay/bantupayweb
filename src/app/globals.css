@@ -2569,7 +2569,7 @@ body {
 
 /* ============================================================
    BantuPay modern redesign (bp-*) — GSAP-driven homepage
-   Fonts: --font-sora (headings/labels/UI), --font-inter (body), --font-dancing (subtitle accent)
+   Fonts: --font-sora (headings/labels/UI), --font-inter (body), --font-arimo (subtitle accent)
    ============================================================ */
 .bp-root {
   position: relative;
@@ -2687,7 +2687,11 @@ body {
 .bp-eyebrow { display: flex; align-items: center; gap: 14px; }
 .bp-eyebrow-rule { width: 34px; height: 2px; background: var(--bp-accent, #8b3d27); display: block; }
 .bp-eyebrow-text { font-weight: 600; font-size: 12.5px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--bp-accent, #8b3d27); }
-.bp-h1 { font-weight: 800; font-size: clamp(2.7rem, 5.2vw, 4.5rem); line-height: 1.02; letter-spacing: -0.02em; color: #2d1810; }
+.bp-h1 {
+  font-weight: 800; font-size: clamp(2.7rem, 5.2vw, 4.5rem);
+  line-height: 1.02; letter-spacing: -0.02em; color: #2d1810;
+  overflow-wrap: normal; word-break: normal; hyphens: none;
+}
 .bp-line-mask { display: block; overflow: hidden; padding-bottom: 0.08em; }
 .bp-accent-text { color: var(--bp-accent, #8b3d27); }
 /* Hand-drawn accent underline under the hero's brand line (animated via DrawSVG) */
@@ -2697,9 +2701,9 @@ body {
 }
 .bp-lead { font-size: clamp(1.5rem, 1.05rem + 1.3vw, 2rem); line-height: 1.45; color: #6b5b4f; max-width: 500px; }
 
-/* Section subtitles: expressive Dancing Script accent under each heading. */
+/* Section subtitles: clean Arimo (Arial-metric) accent under each heading. */
 .bp-lead, .bp-about-lead, .bp-features-sub, .bp-subhead {
-  font-family: var(--font-dancing), 'Dancing Script', 'Segoe Script', cursive;
+  font-family: var(--font-arimo), Arial, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 600;
   letter-spacing: 0.01em;
 }
@@ -2722,6 +2726,12 @@ body {
   .bp-hero { grid-template-columns: 1fr; padding-top: 118px; gap: 36px; min-height: auto; }
   .bp-visual { order: -1; max-width: 460px; margin: 0 auto; }
   .bp-scroll { display: none; }
+  /* Scale the headline with the viewport so each phrase stays on one line
+     instead of wrapping mid-word on phones. */
+  .bp-h1 { font-size: clamp(1.55rem, 6.2vw, 3rem); line-height: 1.1; }
+}
+@media (max-width: 480px) {
+  .bp-hero { padding-left: 20px; padding-right: 20px; }
 }
 
 /* shared section headings */
@@ -2803,7 +2813,7 @@ body {
 .bp-features-sub { font-size: clamp(1.35rem, 1rem + 1vw, 1.75rem); line-height: 1.4; color: #ede0d4; margin-top: 16px; }
 .bp-features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
 .bp-feat { background: #fbf9f4; border-radius: 20px; padding: 30px 24px; transition: box-shadow .3s ease; }
-.bp-feat-icon { width: 64px; height: 64px; border-radius: 16px; background: #ffdbcc; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
+.bp-feat-icon { width: 64px; height: 64px; border-radius: 16px; background: #ffdbcc; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; }
 .bp-feat h3 { font-weight: 700; font-size: 1.15rem; color: #2d1810; margin-bottom: 8px; }
 .bp-feat p { font-size: 14px; line-height: 1.6; color: #6b5b4f; }
 @media (max-width: 1000px) { .bp-features-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -2837,14 +2847,20 @@ body {
 .bp-shots-bar-wrap { height: 3px; flex: 1; max-width: 220px; background: rgba(86,35,21,0.14); border-radius: 999px; overflow: hidden; }
 .bp-shots-bar { height: 100%; width: 8%; background: linear-gradient(90deg, #8b3d27, #421904); border-radius: 999px; }
 .bp-shots-hint { font-weight: 600; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #8b7355; }
-.bp-shots-viewport { overflow: hidden; padding: 12px 0 30px; }
+.bp-shots-viewport { overflow: hidden; padding: 20px 0 64px; }
 .bp-shots-track { display: flex; gap: 28px; padding: 0 32px; width: max-content; align-items: center; }
 .bp-shot { flex: none; will-change: transform, opacity; }
 /* Each screenshot lives inside an iPhone frame (SVG bezel over the image) */
 .bp-phone {
-  position: relative; width: 300px; aspect-ratio: 300 / 446;
-  border-radius: 44px; overflow: hidden; background: #050505;
+  position: relative; width: 300px; aspect-ratio: 300 / 630;
+  border-radius: 46px; background: #050505;
   box-shadow: 0 22px 48px rgba(35,14,6,0.28);
+}
+/* Inner screen: matches the SVG cut-out (10px side / 12px top-bottom of a
+   300x630 frame) so the screenshot sits fully inside the bezel, not under it. */
+.bp-phone-screen {
+  position: absolute; top: 1.9%; bottom: 1.9%; left: 3.333%; right: 3.333%;
+  border-radius: 34px; overflow: hidden; background: #000; z-index: 1;
 }
 .bp-phone-img { object-fit: cover; }
 .bp-phone-frame { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 3; pointer-events: none; }

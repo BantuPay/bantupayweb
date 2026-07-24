@@ -13,9 +13,9 @@ const pillarIconMap = {
 export default async function About() {
   const t = await getTranslations('AboutPage');
   const storyBlocks = t.raw('story_blocks');
-  const missionBlocks = t.raw('mission_blocks');
+  const missionLeft = t.raw('mission_left');
+  const missionRight = t.raw('mission_right');
   const pillars = t.raw('pillars');
-  const mid = Math.ceil(missionBlocks.length / 2);
 
   return (
     <section id="about" className="bp-about">
@@ -31,12 +31,16 @@ export default async function About() {
       <div className="bp-about-grid">
         <div className="bp-about-illus bp-mask-illus">
           <Image
-            src="/About2.png"
+            src="/HDlogo.jpg"
             alt={t('image_alt')}
-            width={560}
-            height={560}
-            className="w-full h-full"
-            style={{ objectFit: 'contain', filter: 'drop-shadow(0 14px 34px rgba(0,0,0,0.55))' }}
+            width={2000}
+            height={1400}
+            className="w-full"
+            style={{
+              height: 'auto',
+              borderRadius: 20,
+              boxShadow: '0 22px 50px rgba(0,0,0,0.50), 0 6px 18px rgba(0,0,0,0.32)',
+            }}
             sizes="(max-width: 960px) 90vw, 420px"
           />
         </div>
@@ -58,12 +62,12 @@ export default async function About() {
         </div>
         <div className="bp-mission-right">
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {missionBlocks.slice(0, mid).map((p, i) => (
+            {missionLeft.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
-            {missionBlocks.slice(mid).map((p, i) => (
+            {missionRight.map((p, i) => (
               <p key={i}>{p}</p>
             ))}
           </div>

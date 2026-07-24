@@ -7,9 +7,9 @@
       "badge": "Paiement nouvelle génération",
       "title": "Votre banque mobile",
       "title2": "Qui assure",
-      "headline_1": "Votre argent,",
-      "headline_2": "à la vitesse",
-      "headline_3": "de la confiance.",
+      "headline_1": "BantuPay",
+      "headline_2": "Votre banque mobile",
+      "headline_3": "qui assure vos fonds",
       "description": "Envoyez et recevez de l'argent instantanément, et payez biens et services entre utilisateurs BantuPay — une banque mobile pensée pour circuler sans friction, en R.D. Congo et au-delà.",
       "cta_primary": "Commencer",
       "cta_secondary": "En savoir plus",
@@ -24,12 +24,12 @@
     },
     "HowPage": {
       "badge": "Commencez en trois étapes",
-      "step1_title": "Créez votre portefeuille",
-      "step1_description": "Inscrivez-vous en quelques minutes avec votre numéro de téléphone — sans agence, sans paperasse.",
+      "step1_title": "Ouvrez un compte",
+      "step1_description": "Inscrivez-vous en quelques minutes avec votre téléphone — sans agence ni paperasse.",
       "step2_title": "Alimentez-le à votre façon",
       "step2_description": "Rechargez avec n'importe quelle carte Visa ou Mobile Money.",
-      "step3_title": "Envoyez instantanément",
-      "step3_description": "Envoyez de l'argent à vos proches et payez vos services au moment voulu — aussi simple qu'un message."
+      "step3_title": "Envoyez et recevez de l'argent instantanément",
+      "step3_description": "Envoyez et recevez de l'argent instantanément de votre famille et vos amis."
     },
     "FooterPage": {
       "rights": "© 2026 BantuPay Ltd. Tous droits réservés.",
@@ -38,7 +38,7 @@
     },
       "AboutPage": {
       "title": "À propos de Bantu Pay",
-      "description": "Une plateforme de banque mobile conçue pour transférer de l'argent instantanément, en toute sécurité et sans friction — pour les familles, les entreprises et les communautés en RDC et au-delà.",
+      "description": "Une plateforme de banque mobile conçue pour transférer de l'argent instantanément, en toute sécurité et sans friction — pour les familles, les entreprises et les communautés en Afrique.",
       "empowering_financial": "Autonomiser",
       "freedom": "la Liberté Financière",
       "story_title": "Notre Histoire",
@@ -52,9 +52,11 @@
         "Une idée simple : et si envoyer de l'argent était aussi facile qu'envoyer un message ? Et si chacun, à Kinshasa ou à l'étranger, pouvait transférer de l'argent instantanément, en toute sécurité et sans friction ?",
         "BantuPay est bien plus qu'une application. C'est un portefeuille numérique et un système de paiement conçu pour la vie réelle. Il permet d'envoyer et de recevoir de l'argent instantanément, de payer des services quotidiens et d'accéder à des espèces via des agents de mobile money."
       ],
-      "mission_blocks": [
+      "mission_left": [
         "Trop longtemps, l'accès aux services financiers a dépendu de l'endroit où vous vivez, de qui vous connaissez ou de ce que vous possédez. Nous croyons que cela doit changer.",
-        "Notre mission est de briser les barrières qui freinent les gens et de les remplacer par des outils simples et puissants qui fonctionnent réellement. Grâce à la banque mobile, nous créons un système où chacun peut envoyer, recevoir et utiliser de l'argent instantanément — sans friction, sans limites.",
+        "Notre mission est de briser les barrières qui freinent les gens et de les remplacer par des outils simples et puissants qui fonctionnent réellement. Grâce à la banque mobile, nous créons un système où chacun peut envoyer, recevoir et utiliser de l'argent instantanément — sans friction, sans limites."
+      ],
+      "mission_right": [
         "Pour des millions de personnes, quelque chose d'aussi basique que d'envoyer de l'argent, d'être payé ou de gérer ses finances reste un défi. Des opportunités sont manquées. Les entreprises grandissent plus lentement.",
         "BantuPay existe pour rendre la liberté financière accessible à tous, quelle que soit leur origine, quel que soit leur lieu de résidence. Parce que l'accès à l'argent ne concerne pas seulement la commodité. C'est une question d'indépendance. C'est une question de construire un avenir meilleur."
       ],
@@ -82,7 +84,7 @@
         {
           "id": "impact",
           "title": "Notre Impact",
-          "summary": "Un impact réel — pas seulement en chiffres, mais dans des vies améliorées. Nous comblons le fossé financier pour des millions de personnes en R.D. Congo."
+          "summary": "Un impact réel — pas seulement en chiffres, mais dans des vies améliorées. Nous comblons le fossé financier pour des millions de personnes en Afrique."
         }
       ]
     },
@@ -91,8 +93,8 @@
         "badge": "Fonctionnalités",
         "title": "Tout ce dont vous avez besoin, dans une seule app.",
         "subtitle": "Vos transactions numériques seront plus fluides avec ces ajouts révolutionnaires.",
-        "feature1_title": "Frais de transaction réduits",
-        "feature1_description": "Frais d'envoi bas, frais de retrait encore plus bas",
+        "feature1_title": "Frais réduits",
+        "feature1_description": "Frais de recharge et de retrait réduits",
         "feature2_title": "Transfert d'argent instantané",
         "feature2_description": "Envoyez et recevez de l'argent instantanément",
         "feature3_title": "Support client",
@@ -105,8 +107,8 @@
         "feature6_description": "Gardez une trace de toutes vos entrées et sorties",
         "feature7_title": "Transactions instantanées",
         "feature7_description": "Payez des biens ou des services instantanément",
-        "feature8_title": "Support carte Visa",
-        "feature8_description": "Rechargez votre compte bancaire mobile avec une carte Visa"
+        "feature8_title": "Rechargement du compte",
+        "feature8_description": "Rechargez votre compte avec une carte Visa ou Mobile Money"
       },
       "PricingPage": {
     "PricingPage_Header_Title": "Choisissez Votre Plan",

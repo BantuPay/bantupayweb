@@ -1,11 +1,11 @@
 import { getTranslations } from 'next-intl/server';
 
 const plans = [
-  { name: 'GOLD', price: '3.00 USD', features: [true, true, true, true, true, true, true, true, true], popular: true },
-  { name: 'PREMIUM', price: '2.00 USD', features: [true, true, false, true, true, true, true, false, false], popular: false },
-  { name: 'DIASPORA', price: '0.00 USD', features: [true, true, false, true, true, false, true, true, false], popular: false },
-  { name: 'SILVER', price: '1.00 USD', features: [true, true, false, true, false, true, true, false, false], popular: false },
+  { name: 'GOLD', price: '3.00 USD', features: [true, true, true, true, true, true, true, true, true], popular: false },
   { name: 'DIASPORA+', price: '3.00 USD', features: [true, true, false, true, true, true, true, true, true], popular: false },
+  { name: 'PREMIUM', price: '2.00 USD', features: [true, true, false, true, true, true, true, false, false], popular: false },
+  { name: 'SILVER', price: '1.00 USD', features: [true, true, false, true, false, true, true, false, false], popular: false },
+  { name: 'DIASPORA', price: '0.00 USD', features: [true, true, false, true, true, false, true, true, false], popular: false },
   { name: 'BASIC', price: '0.00 USD', features: [true, true, false, true, false, true, true, false, false], popular: false },
 ];
 
